@@ -18,10 +18,10 @@ export interface SiteConfig {
 
 export const config: SiteConfig = {
   title: "Alex Marcus",
-  description: "The portfolio of Alex Marcus: Software, Design, and Team Organization.",
+  description: "The portfolio of Alex Marcus: Software, Design, and Leadership.",
   author: {
     name: "Alex Marcus",
-    bio: "Software engineer joining the worlds of technology, design, and team organization to deliver innovative applications.",
+    bio: "Software engineer joining the worlds of technology, design, and leadership to deliver innovative applications.",
     // avatar: "/images/avatar.jpg" // Uncomment and add your avatar image to public/images/
   },
   social: {

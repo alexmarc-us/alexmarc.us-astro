@@ -22,8 +22,8 @@
   --color-accent: var(--color-accent-purple);
   
   /* Typography */
-  --font-heading-primary: 'Oswald', sans-serif;
-  --font-heading-secondary: 'Roboto Condensed', sans-serif;
+  --font-heading-primary: 'Bungee Shade', system-ui;
+  --font-heading-secondary: 'Bungee', system-ui;
   --font-body: 'Work Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   

@@ -22,9 +22,9 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/rss": "^4.0.12",
+    "@fontsource/bungee": "^5.2.6",
+    "@fontsource/bungee-shade": "^5.2.6",
     "@fontsource/jetbrains-mono": "^5.0.0",
-    "@fontsource/oswald": "^5.2.6",
-    "@fontsource/roboto-condensed": "^5.2.6",
     "@fontsource/work-sans": "^5.2.6",
     "astro": "^5.9.1"
   },

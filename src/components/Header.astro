@@ -1,29 +1,62 @@
 ---
-import { config } from '../config';
-import ThemeToggle from './ThemeToggle.astro';
+import { config } from "../config";
+import ThemeToggle from "./ThemeToggle.astro";
 
-const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: '' };
+const { base = "" } = Astro.site
+  ? { base: import.meta.env.BASE_URL }
+  : { base: "" };
 ---
 
 <header class="site-header">
   <div class="header-content">
     <!-- Mobile hamburger button - far left on mobile -->
-    <button class="hamburger-toggle mobile-only" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path class="hamburger-line" d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path class="hamburger-line" d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path class="hamburger-line" d="M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <button
+      class="hamburger-toggle mobile-only"
+      id="hamburger-toggle"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="hamburger-line"
+          d="M3 6h18"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"></path>
+        <path
+          class="hamburger-line"
+          d="M3 12h18"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"></path>
+        <path
+          class="hamburger-line"
+          d="M3 18h18"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"></path>
       </svg>
     </button>
-    
+
     <div class="site-title">
       <a href={base}>
-        <img src={base + "site-title.svg"} alt={config.title} class="title-svg" />
+        <img src={base + "am.png"} alt={config.title} />
+        <h1>Alex Marcus</h1>
       </a>
     </div>
-    
+
     <div class="header-controls">
-      <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+      <nav
+        class="main-navigation"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <ul class="nav-list">
           <li><a href={base} class="nav-link">Home</a></li>
           <li><a href={base + "projects"} class="nav-link">Projects</a></li>
@@ -31,14 +64,34 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
           <li><a href={base + "about"} class="nav-link">About</a></li>
         </ul>
       </nav>
-      
+
       <!-- Mobile controls group - RSS and Search on right -->
       <div class="mobile-controls">
         <ThemeToggle />
-        <button class="search-toggle" id="search-toggle" aria-label="Search projects">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-            <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <button
+          class="search-toggle"
+          id="search-toggle"
+          aria-label="Search projects"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"></circle>
+            <path
+              d="M21 21l-4.35-4.35"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"></path>
           </svg>
         </button>
       </div>
@@ -50,7 +103,9 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
   <ul class="mobile-nav-list">
     <li><a href={base} class="mobile-nav-link">Home</a></li>
     <li><a href={base + "projects"} class="mobile-nav-link">Projects</a></li>
-    <li><a href={base + "categories"} class="mobile-nav-link">Categories</a></li>
+    <li>
+      <a href={base + "categories"} class="mobile-nav-link">Categories</a>
+    </li>
     <li><a href={base + "about"} class="mobile-nav-link">About</a></li>
   </ul>
 </nav>
@@ -58,11 +113,35 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
 <div class="search-overlay" id="search-overlay">
   <div class="search-container">
     <div class="search-header">
-      <input type="text" class="search-input" id="search-input" placeholder="Search projects..." autocomplete="off">
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        placeholder="Search projects..."
+        autocomplete="off"
+      />
       <button class="search-close" id="search-close" aria-label="Close search">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"/>
-          <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2"/>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            y1="6"
+            x2="6"
+            y2="18"
+            stroke="currentColor"
+            stroke-width="2"></line>
+          <line
+            x1="6"
+            y1="6"
+            x2="18"
+            y2="18"
+            stroke="currentColor"
+            stroke-width="2"></line>
         </svg>
       </button>
     </div>
@@ -71,80 +150,86 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
 </div>
 
 <script>
-  const base = `${import.meta.env.BASE_URL || ''}`;
-  
+  const base = `${import.meta.env.BASE_URL || ""}`;
+
   // Hamburger menu functionality
   function initHamburgerMenu() {
-    const hamburgerToggle = document.getElementById('hamburger-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerToggle = document.getElementById("hamburger-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
     const body = document.body;
 
     if (!hamburgerToggle || !mobileMenu) return;
 
-    hamburgerToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('active');
-      
+    hamburgerToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("active");
+
       if (isOpen) {
-        mobileMenu.classList.remove('active');
-        hamburgerToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
+        mobileMenu.classList.remove("active");
+        hamburgerToggle.setAttribute("aria-expanded", "false");
+        body.style.overflow = "";
       } else {
-        mobileMenu.classList.add('active');
-        hamburgerToggle.setAttribute('aria-expanded', 'true');
-        body.style.overflow = 'hidden';
+        mobileMenu.classList.add("active");
+        hamburgerToggle.setAttribute("aria-expanded", "true");
+        body.style.overflow = "hidden";
       }
     });
 
     // Close menu when clicking on a link
-    const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
-    mobileNavLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        hamburgerToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
+    const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-nav-link");
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        hamburgerToggle.setAttribute("aria-expanded", "false");
+        body.style.overflow = "";
       });
     });
 
     // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
-        hamburgerToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+        mobileMenu.classList.remove("active");
+        hamburgerToggle.setAttribute("aria-expanded", "false");
+        body.style.overflow = "";
       }
     });
   }
 
   // Search functionality
   let searchData: any[] = [];
-  let searchOverlay: HTMLElement | null, searchInput: HTMLInputElement | null, searchResults: HTMLElement | null;
+  let searchOverlay: HTMLElement | null,
+    searchInput: HTMLInputElement | null,
+    searchResults: HTMLElement | null;
 
   async function initSearch() {
     try {
-      const response = await fetch(base + 'search.json');
+      const response = await fetch(base + "search.json");
       searchData = await response.json();
     } catch (error) {
-      console.error('Failed to load search data:', error);
+      console.error("Failed to load search data:", error);
     }
 
-    searchOverlay = document.getElementById('search-overlay');
-    searchInput = document.getElementById('search-input') as HTMLInputElement;
-    searchResults = document.getElementById('search-results');
+    searchOverlay = document.getElementById("search-overlay");
+    searchInput = document.getElementById("search-input") as HTMLInputElement;
+    searchResults = document.getElementById("search-results");
 
     // Event listeners
-    document.getElementById('search-toggle')?.addEventListener('click', openSearch);
-    document.getElementById('search-close')?.addEventListener('click', closeSearch);
-    searchInput?.addEventListener('input', handleSearch);
-    
+    document
+      .getElementById("search-toggle")
+      ?.addEventListener("click", openSearch);
+    document
+      .getElementById("search-close")
+      ?.addEventListener("click", closeSearch);
+    searchInput?.addEventListener("input", handleSearch);
+
     // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && searchOverlay?.classList.contains('active')) {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && searchOverlay?.classList.contains("active")) {
         closeSearch();
       }
     });
-    
+
     // Close on overlay click
-    searchOverlay?.addEventListener('click', (e: Event) => {
+    searchOverlay?.addEventListener("click", (e: Event) => {
       if (e.target === searchOverlay) {
         closeSearch();
       }
@@ -152,32 +237,38 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
   }
 
   function openSearch() {
-    searchOverlay?.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    searchOverlay?.classList.add("active");
+    document.body.style.overflow = "hidden";
     setTimeout(() => searchInput?.focus(), 100);
   }
 
   function closeSearch() {
-    searchOverlay?.classList.remove('active');
-    document.body.style.overflow = '';
-    if (searchInput) searchInput.value = '';
-    if (searchResults) searchResults.innerHTML = '';
+    searchOverlay?.classList.remove("active");
+    document.body.style.overflow = "";
+    if (searchInput) searchInput.value = "";
+    if (searchResults) searchResults.innerHTML = "";
   }
 
   function handleSearch(e: Event) {
     const target = e.target as HTMLInputElement;
     const query = target.value.toLowerCase().trim();
-    
+
     if (query.length < 2) {
-      if (searchResults) searchResults.innerHTML = '';
+      if (searchResults) searchResults.innerHTML = "";
       return;
     }
 
-    const results = searchData.filter((post: any) => 
-      post.title.toLowerCase().includes(query) ||
-      post.excerpt.toLowerCase().includes(query) ||
-      (post.categories && post.categories.some((cat: string) => cat.toLowerCase().includes(query)))
-    ).slice(0, 10);
+    const results = searchData
+      .filter(
+        (post: any) =>
+          post.title.toLowerCase().includes(query) ||
+          post.excerpt.toLowerCase().includes(query) ||
+          (post.categories &&
+            post.categories.some((cat: string) =>
+              cat.toLowerCase().includes(query),
+            )),
+      )
+      .slice(0, 10);
 
     displayResults(results, query);
   }
@@ -194,29 +285,39 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
       return;
     }
 
-    const resultsHTML = results.map((post: any) => `
+    const resultsHTML = results
+      .map(
+        (post: any) => `
       <article class="search-result">
         <h3 class="search-result-title">
-          <a href="${base}${post.url.startsWith('/') ? post.url.slice(1) : post.url}">${post.title}</a>
+          <a href="${base}${post.url.startsWith("/") ? post.url.slice(1) : post.url}">${post.title}</a>
         </h3>
-        <time class="search-result-date">${new Date(post.date).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
+        <time class="search-result-date">${new Date(
+          post.date,
+        ).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
         })}</time>
-        ${post.excerpt ? `<p class="search-result-excerpt">${post.excerpt}</p>` : ''}
-        ${post.categories ? `
+        ${post.excerpt ? `<p class="search-result-excerpt">${post.excerpt}</p>` : ""}
+        ${
+          post.categories
+            ? `
           <div class="search-result-categories">
-            ${post.categories.map((cat: string) => `<span class="search-category">${cat}</span>`).join(' ')}
+            ${post.categories.map((cat: string) => `<span class="search-category">${cat}</span>`).join(" ")}
           </div>
-        ` : ''}
+        `
+            : ""
+        }
       </article>
-    `).join('');
+    `,
+      )
+      .join("");
 
     if (searchResults) {
       searchResults.innerHTML = `
         <div class="search-results-header">
-          <p>Found ${results.length} article${results.length === 1 ? '' : 's'} for "${query}"</p>
+          <p>Found ${results.length} article${results.length === 1 ? "" : "s"} for "${query}"</p>
         </div>
         ${resultsHTML}
       `;
@@ -229,8 +330,8 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     initSearch();
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
@@ -258,16 +359,24 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
   }
 
   .site-title a {
-    display: block;
+    padding: calc(var(--grid-unit) / 2);
+    display: flex;
+    align-items: center;
     line-height: 0;
+    gap: calc(var(--grid-unit) * 3);
   }
 
-  .title-svg {
+  .site-title img {
     height: 48px;
     width: auto;
-    max-width: 280px;
-    border: none !important; /* Override global img styles */
-    margin: 0 !important; /* Override global img styles */
+    background-color: var(--color-accent);
+    padding: 6px;
+    border: none;
+  }
+
+  .site-title h1 {
+    color: var(--color-accent);
+    margin-bottom: 0;
   }
 
   .header-controls {
@@ -305,7 +414,9 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
 
   .search-overlay.active {
@@ -370,7 +481,8 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     border-radius: 8px;
     border: 1px solid var(--color-border);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 4);
+    padding: calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 4)
+      calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 4);
   }
 
   .search-results:empty {
@@ -379,7 +491,8 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
 
   .search-results-header {
     padding: calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 4);
-    margin: calc(var(--grid-unit) * -3) calc(var(--grid-unit) * -4) calc(var(--grid-unit) * 3) calc(var(--grid-unit) * -4);
+    margin: calc(var(--grid-unit) * -3) calc(var(--grid-unit) * -4)
+      calc(var(--grid-unit) * 3) calc(var(--grid-unit) * -4);
     border-bottom: 1px solid var(--color-border);
     background: var(--color-surface);
     position: sticky;
@@ -580,7 +693,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     justify-content: center;
     text-decoration: none;
   }
-  
+
   .github-star-button {
     background: none;
     border: 2px solid var(--color-accent);
@@ -600,7 +713,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     font-size: 0.875rem;
     border-radius: 4px;
   }
-  
+
   .github-star-button:hover,
   .github-star-button:focus {
     background-color: var(--color-accent);
@@ -609,7 +722,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .github-star-text {
     display: inline-block;
   }
@@ -701,24 +814,24 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
       width: auto;
       max-width: 180px;
     }
-    
+
     .header-controls {
       justify-self: end;
       gap: 0;
       grid-column: 3; /* Explicitly place in right column */
     }
-    
+
     /* Hide desktop navigation on mobile */
     .main-navigation {
       display: none;
     }
-    
+
     /* Show mobile controls on right */
     .mobile-controls {
       display: flex !important;
       gap: calc(var(--grid-unit) * 1.5);
     }
-    
+
     .hamburger-toggle,
     .rss-toggle,
     .search-toggle {
@@ -736,51 +849,53 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     }
 
     .search-results {
-      padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 2.5) calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 2.5);
+      padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 2.5)
+        calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 2.5);
     }
-    
+
     .search-results-header {
       padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 2.5);
-      margin: calc(var(--grid-unit) * -2) calc(var(--grid-unit) * -2.5) calc(var(--grid-unit) * 2) calc(var(--grid-unit) * -2.5);
+      margin: calc(var(--grid-unit) * -2) calc(var(--grid-unit) * -2.5)
+        calc(var(--grid-unit) * 2) calc(var(--grid-unit) * -2.5);
     }
-    
+
     .search-result-categories {
       gap: calc(var(--grid-unit) * 2);
     }
-    
+
     .search-category {
       padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 2);
     }
-    
+
     .search-result-title {
       margin-bottom: calc(var(--grid-unit) * 2);
     }
-    
+
     .search-result-date {
       margin-bottom: calc(var(--grid-unit) * 3);
     }
-    
+
     .search-result-excerpt {
       margin-bottom: calc(var(--grid-unit) * 4);
     }
-    
+
     /* Adjust GitHub button for mobile */
     .github-star-button {
       padding: calc(var(--grid-unit) * 0.75);
       border-width: 1px;
     }
-    
+
     .github-star-text {
       display: none;
     }
   }
-  
+
   @media (max-width: 480px) {
     /* Even smaller mobile adjustments */
     .mobile-controls {
       gap: calc(var(--grid-unit)) !important;
     }
-    
+
     .github-star-button,
     .rss-toggle,
     .search-toggle {
