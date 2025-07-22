@@ -2,11 +2,10 @@
 import Layout from '../components/Layout.astro';
 import { config } from '../config';
 
-const { title, description, author, social } = config;
-const pageDescription = `Learn more about ${author.name} and the ${title} project`;
+const { author, social } = config;
 ---
 
-<Layout title={`About | ${title}`} description={pageDescription}>
+<Layout title="About" description="More about Alex Marcus.">
   <div class="about-page">
     <header class="page-header">
       <h1 class="page-title">About</h1>
