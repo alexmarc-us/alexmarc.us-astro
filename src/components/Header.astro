@@ -59,9 +59,9 @@ const { base = "" } = Astro.site
       >
         <ul class="nav-list">
           <li><a href={base} class="nav-link">Home</a></li>
+          <li><a href={base + "profile"} class="nav-link">Profile</a></li>
           <li><a href={base + "projects"} class="nav-link">Projects</a></li>
-          <li><a href={base + "categories"} class="nav-link">Categories</a></li>
-          <li><a href={base + "about"} class="nav-link">About</a></li>
+          <li><a href={base + "posts"} class="nav-link">Posts</a></li>
         </ul>
       </nav>
 
@@ -364,6 +364,7 @@ const { base = "" } = Astro.site
     align-items: center;
     line-height: 0;
     gap: calc(var(--grid-unit) * 3);
+    border-bottom: 2px solid transparent;
   }
 
   .site-title img {
@@ -375,7 +376,7 @@ const { base = "" } = Astro.site
   }
 
   .site-title h1 {
-    color: var(--color-accent);
+    color: var(--color-text-primary);
     margin-bottom: 0;
   }
 
@@ -633,7 +634,9 @@ const { base = "" } = Astro.site
   }
 
   .nav-link:hover,
-  .nav-link:focus {
+  .nav-link:focus,
+  .site-title a:hover,
+  .site-title a:focus {
     color: var(--color-accent);
     border-bottom-color: var(--color-accent);
     text-decoration: none;

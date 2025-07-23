@@ -1,7 +1,12 @@
 ---
 import Layout from "../components/Layout.astro";
-const mdPostsGlob = import.meta.glob("../content/projects/*.md", { eager: true });
-const mdxPostsGlob = import.meta.glob("../content/projects/*.mdx", { eager: true });
+import { config } from "../config";
+const mdPostsGlob = import.meta.glob("../content/projects/*.md", {
+  eager: true,
+});
+const mdxPostsGlob = import.meta.glob("../content/projects/*.mdx", {
+  eager: true,
+});
 
 const allPosts = [
   ...Object.values(mdPostsGlob),
@@ -11,44 +16,43 @@ const sortedPosts = allPosts
   .sort(
     (a: any, b: any) =>
       new Date(b.frontmatter.date).getTime() -
-      new Date(a.frontmatter.date).getTime()
+      new Date(a.frontmatter.date).getTime(),
   )
   .slice(0, 3);
 ---
 
 <Layout
   title="Alex Marcus"
-  description="An Astro project theme exploring the aesthetic tension between Bauhaus modernism and WW2-era monumental design. Where functionalism meets grandeur in dissonant harmony."
+  description={config.description}
   showSidebar={false}
 >
   <div class="landing-page">
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <p class="hero-subtitle">Hi there, I'm Alex.</p>
-        <img src={import.meta.env.BASE_URL + "leaning.jpg"} alt="A photo of Alex Marcus leaning against a cement wall while wearing a green coat and smiling." />
-        <p class="hero-description">
-          I join the worlds of technology,
-          design, and leadership to deliver innovative applications.
-        </p>
+        <h1 class="hero-subtitle">Hi there, I'm Alex.</h1>
+        <img
+          src={import.meta.env.BASE_URL + "leaning.jpg"}
+          alt="A photo of Alex Marcus leaning against a cement wall while wearing a green coat and smiling."
+        />
         <p class="hero-description">
           My dual passions of art and computer science led me to a 16-year
-          history of driving challenging projects to completion through
-          mentorship and collaboration. This site is a collection of my favorite
-          projects.
+          career of creative coding. With my leadership and organizational skills I
+          drive challenging projects to completion through mentorship and
+          collaboration.
         </p>
-        <p class="hero-description">
-          I live in Bainbridge Island, WA with my little family. Together we
-          explore the wilds of the Pacific Northwest and beyond.
-        </p>
+        <p class="hero-description">This site contains my profile, all my posts, and a collection of my favorite projects.</p>
         <hr class="hero-rule" />
         <div class="hero-actions">
-          <a href="#demo" class="btn btn-primary">View Demo</a>
-          <a href="#installation" class="btn btn-secondary">Get Started</a>
+          <a href="#superpowers" class="btn btn-primary">Superpowers</a>
+          <a href="#projects" class="btn btn-secondary">Portfolio</a>
         </div>
       </div>
     </section>
 
+    <!-- TODO: Latest posts section -->
+
+    <!-- TODO: Move this to the portfolio page and use for highlighting -->
     <!-- Demo Section -->
     <section class="demo-section" id="demo">
       <div class="container">
@@ -79,7 +83,7 @@ const sortedPosts = allPosts
                           year: "numeric",
                           month: "long",
                           day: "numeric",
-                        }
+                        },
                       )}
                     </time>
                     <span class="demo-post-reading-time">5 min read</span>
@@ -110,6 +114,7 @@ const sortedPosts = allPosts
       </div>
     </section>
 
+    <!-- TODO: Move this to the profile and use for skill/superpowers -->
     <!-- Features Section -->
     <section class="features" id="features">
       <div class="container">
@@ -175,7 +180,7 @@ const sortedPosts = allPosts
 
   .hero {
     text-align: center;
-    padding: calc(var(--grid-unit) * 12) 0 calc(var(--grid-unit) * 8);
+    padding: calc(var(--grid-unit) * 8);
     background: linear-gradient(
       135deg,
       var(--color-surface) 0%,
@@ -201,10 +206,7 @@ const sortedPosts = allPosts
   }
 
   .hero-subtitle {
-    font-family: var(--font-heading-secondary);
-    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     margin-bottom: calc(var(--grid-unit) * 3);
