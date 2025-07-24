@@ -2,7 +2,7 @@
   "name": "alexmarc.us-astro",
   "type": "module",
   "version": "1.0.0",
-  "description": "An Astro portfolio for Alex Marcus: software engineer and technical leader",
+  "description": "A portfolio for Alex Marcus.",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

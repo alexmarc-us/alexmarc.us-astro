@@ -30,137 +30,19 @@ const sortedPosts = allPosts
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1 class="hero-subtitle">Hi there, I'm Alex.</h1>
-        <img
-          src={import.meta.env.BASE_URL + "leaning.jpg"}
-          alt="A photo of Alex Marcus leaning against a cement wall while wearing a green coat and smiling."
-        />
+        <h1 class="hero-title">Hi there, I'm Alex.</h1>
         <p class="hero-description">
-          My dual passions of art and computer science led me to a 16-year
-          career of creative coding. With my leadership and organizational skills I
-          drive challenging projects to completion through mentorship and
-          collaboration.
+          I am a software development lead and user experience expert. I join the worlds of technology and design to deliver innovative applications.
         </p>
-        <p class="hero-description">This site contains my profile, all my posts, and a collection of my favorite projects.</p>
-        <hr class="hero-rule" />
+        <p class="hero-description">This site contains my profile, posts, and favorite projects.</p>
+        <img
+          src={import.meta.env.BASE_URL + "photos/casual.jpg"}
+          alt="A photo of Alex Marcus standing in a hallway while wearing a white shirt and smiling."
+        />
         <div class="hero-actions">
-          <a href="#superpowers" class="btn btn-primary">Superpowers</a>
-          <a href="#projects" class="btn btn-secondary">Portfolio</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- TODO: Latest posts section -->
-
-    <!-- TODO: Move this to the portfolio page and use for highlighting -->
-    <!-- Demo Section -->
-    <section class="demo-section" id="demo">
-      <div class="container">
-        <h2 class="section-title">Live Demo</h2>
-        <p class="demo-description">
-          See the theme in action with sample project posts that demonstrate all
-          typography, layout, and design elements working together in perfect
-          dissonant harmony.
-        </p>
-
-        {
-          sortedPosts.length > 0 && (
-            <div class="demo-posts">
-              {sortedPosts.map((post) => (
-                <article class="demo-post-card">
-                  <h3 class="demo-post-title">
-                    <a href={post.url}>{post.frontmatter.title}</a>
-                  </h3>
-
-                  <div class="demo-post-meta">
-                    <time
-                      class="demo-post-date"
-                      datetime={post.frontmatter.date}
-                    >
-                      {new Date(post.frontmatter.date).toLocaleDateString(
-                        "en-US",
-                        {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        },
-                      )}
-                    </time>
-                    <span class="demo-post-reading-time">5 min read</span>
-                  </div>
-
-                  {post.frontmatter.excerpt && (
-                    <p class="demo-post-excerpt">{post.frontmatter.excerpt}</p>
-                  )}
-
-                  {post.frontmatter.categories && (
-                    <div class="demo-post-categories">
-                      {post.frontmatter.categories.map((category: string) => (
-                        <span class="demo-category">{category}</span>
-                      ))}
-                    </div>
-                  )}
-                </article>
-              ))}
-            </div>
-          )
-        }
-
-        <div class="demo-actions">
-          <a href={`${import.meta.env.BASE_URL}project`} class="btn btn-primary"
-            >View Project</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- TODO: Move this to the profile and use for skill/superpowers -->
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="container">
-        <h2 class="section-title">Design Philosophy</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3 class="feature-title">Dissonant Harmony</h3>
-            <p class="feature-description">
-              Bauhaus minimalism meets monumental design. Clean aesthetics with
-              bold, commanding presence.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Perfect Readability</h3>
-            <p class="feature-description">
-              Optimized typography with ideal line lengths and spacing for
-              maximum comprehension.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Left Aligned</h3>
-            <p class="feature-description">
-              Natural reading flow with consistent left alignment throughout all
-              content.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Typographic Tension</h3>
-            <p class="feature-description">
-              Cormorant Garamond meets Inter. Classical serif headings contrast
-              modern sans-serif body.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Constructivist Grid</h3>
-            <p class="feature-description">
-              8-point grid system creates structural order. Blood-red rules
-              command attention.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Fast Performance</h3>
-            <p class="feature-description">
-              Zero JavaScript, minimal CSS, self-hosted fonts for blazing speed.
-            </p>
-          </div>
+          <a href="#superpowers" class="btn btn-primary">Profile</a>
+          <a href="#projects" class="btn btn-primary">Posts</a>
+          <a href="#projects" class="btn btn-primary">Projects</a>
         </div>
       </div>
     </section>
@@ -196,20 +78,14 @@ const sortedPosts = allPosts
 
   .hero-title {
     font-family: var(--font-heading-primary);
-    font-size: 4.5rem;
     font-weight: 700;
-    color: var(--color-accent);
+    letter-spacing: 0.2em;
+    margin-bottom: calc(var(--grid-unit) * 3);
+    color: var(--color-text-primary);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     line-height: 0.9;
     margin-bottom: calc(var(--grid-unit) * 2);
-  }
-
-  .hero-subtitle {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: calc(var(--grid-unit) * 3);
   }
 
   .hero-description {
