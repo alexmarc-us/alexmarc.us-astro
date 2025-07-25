@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
-    "@astrojs/rss": "^4.0.12",
     "@fontsource/bungee": "^5.2.6",
     "@fontsource/bungee-shade": "^5.2.6",
     "@fontsource/jetbrains-mono": "^5.0.0",
