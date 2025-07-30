@@ -95,8 +95,8 @@ const currentYear = new Date().getFullYear();
     width: 50px;
     height: 50px;
     background-color: transparent;
-    border: 2px solid var(--color-accent);
-    color: var(--color-accent);
+    border: 2px solid var(--color-text-primary);
+    color: var(--color-text-primary);
     border-radius: 4px;
     transition: all 0.2s ease;
   }
@@ -105,6 +105,8 @@ const currentYear = new Date().getFullYear();
   .social-link:focus {
     transform: translateY(-2px);
     text-decoration: none;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
   }
 
   .social-link svg {

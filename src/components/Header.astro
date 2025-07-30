@@ -161,12 +161,13 @@ const { base = "" } = Astro.site
     line-height: 0;
     gap: calc(var(--grid-unit) * 3);
     border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
   }
 
   .site-title img {
     height: 48px;
     width: 48px;
-    background-color: var(--color-surface);
+    background-color: transparent;
     padding: 6px;
     border: none;
   }
