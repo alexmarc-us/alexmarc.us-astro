@@ -8,7 +8,7 @@ const { base = "" } = Astro.site
 
 <header class="site-header">
   <div class="header-content">
-    <!-- Mobile hamburger button - far left on mobile -->
+    <!-- Mobile hamburger button -->
     <button
       class="hamburger-toggle mobile-only"
       id="hamburger-toggle"
@@ -165,8 +165,8 @@ const { base = "" } = Astro.site
 
   .site-title img {
     height: 48px;
-    width: auto;
-    background-color: var(--color-accent);
+    width: 48px;
+    background-color: var(--color-surface);
     padding: 6px;
     border: none;
   }
@@ -326,8 +326,8 @@ const { base = "" } = Astro.site
 
     .site-title img {
       height: 48px;
-      width: auto;
-      background-color: var(--color-accent);
+      width: 48px;
+      background-color: var(--color-surface);
       padding: 6px;
       border: none;
     }
@@ -336,7 +336,7 @@ const { base = "" } = Astro.site
       font-size: 2rem;
     }
 
-    /* Show mobile hamburger on far left */
+    /* Show mobile hamburger centered */
     .mobile-only {
       display: flex !important;
       justify-self: start;
@@ -350,12 +350,6 @@ const { base = "" } = Astro.site
 
     .site-title a {
       display: inline-block;
-    }
-
-    .title-svg {
-      height: 36px;
-      width: auto;
-      max-width: 180px;
     }
 
     .header-controls {
