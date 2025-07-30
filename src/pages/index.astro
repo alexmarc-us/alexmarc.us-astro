@@ -39,11 +39,6 @@ const sortedPosts = allPosts
           src={import.meta.env.BASE_URL + "photos/casual.jpg"}
           alt="A photo of Alex Marcus standing in a hallway while wearing a white shirt and smiling."
         />
-        <div class="hero-actions">
-          <a href="#superpowers" class="btn btn-primary">Profile</a>
-          <a href="#projects" class="btn btn-primary">Posts</a>
-          <a href="#projects" class="btn btn-primary">Projects</a>
-        </div>
       </div>
     </section>
   </div>
@@ -122,19 +117,14 @@ const sortedPosts = allPosts
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    font-size: 0.95rem;
-  }
-
-  .btn-primary {
-    background-color: var(--color-accent);
-    color: white;
+    background-color: transparent;
     border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 0.95rem;
   }
 
   .btn-primary:hover,
   .btn-primary:focus {
-    background-color: transparent;
-    color: var(--color-accent);
     transform: translateY(-2px);
   }
 
