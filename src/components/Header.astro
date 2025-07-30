@@ -57,10 +57,33 @@ const { base = "" } = Astro.site
         aria-label="Main navigation"
       >
         <ul class="nav-list">
-          <li><a href={base} class="nav-link">Home</a></li>
-          <li><a href={base + "resume"} class="nav-link">Resume</a></li>
-          <li><a href={base + "posts"} class="nav-link">Posts</a></li>
-          <li><a href={base + "projects"} class="nav-link">Projects</a></li>
+          {
+            ["Home", "Resume", "Posts", "Projects"].map((label, i) => {
+              const paths = [
+                base,
+                base + "resume",
+                base + "posts",
+                base + "projects",
+              ];
+              const isActive =
+                label === "Home"
+                  ? Astro.url.pathname === paths[0]
+                  : label === "Resume"
+                    ? Astro.url.pathname === paths[1]
+                    : Astro.url.pathname.startsWith(paths[i]);
+              return (
+                <li>
+                  <a
+                    href={paths[i]}
+                    class={`nav-link${isActive ? " active" : ""}`}
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {label}
+                  </a>
+                </li>
+              );
+            })
+          }
         </ul>
       </nav>
     </div>
@@ -69,10 +92,33 @@ const { base = "" } = Astro.site
 
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <ul class="mobile-nav-list">
-    <li><a href={base} class="mobile-nav-link">Home</a></li>
-    <li><a href={base + "resume"} class="mobile-nav-link">Resume</a></li>
-    <li><a href={base + "posts"} class="mobile-nav-link">Posts</a></li>
-    <li><a href={base + "projects"} class="mobile-nav-link">Projects</a></li>
+    {
+      ["Home", "Resume", "Posts", "Projects"].map((label, i) => {
+        const paths = [
+          base,
+          base + "resume",
+          base + "posts",
+          base + "projects",
+        ];
+        const isActive =
+          label === "Home"
+            ? Astro.url.pathname === paths[0]
+            : label === "Resume"
+              ? Astro.url.pathname === paths[1]
+              : Astro.url.pathname.startsWith(paths[i]);
+        return (
+          <li>
+            <a
+              href={paths[i]}
+              class={`mobile-nav-link${isActive ? " active" : ""}`}
+              aria-current={isActive ? "page" : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        );
+      })
+    }
   </ul>
 </nav>
 
@@ -203,16 +249,18 @@ const { base = "" } = Astro.site
     letter-spacing: 0.05em;
     color: var(--color-text-primary);
     padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
-    border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
+  }
+
+  .nav-link.active {
+    border-bottom: 2px solid var(--color-accent);
   }
 
   .nav-link:hover,
   .nav-link:focus,
   .site-title a:hover,
   .site-title a:focus {
-    color: var(--color-accent);
-    border-bottom-color: var(--color-accent);
+    color: var(--color-text-secondary);
     text-decoration: none;
   }
 

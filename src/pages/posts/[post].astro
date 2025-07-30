@@ -43,7 +43,7 @@ const base = import.meta.env.BASE_URL;
       <p class="page-description">
         {posts.length} article{posts.length === 1 ? '' : 's'} in this category
       </p>
-      <hr class="page-rule" />
+      <hr />
     </header>
 
     <div class="posts-list">
@@ -109,14 +109,6 @@ const base = import.meta.env.BASE_URL;
     line-height: 1.6;
     color: var(--color-text-secondary);
     margin-bottom: calc(var(--grid-unit) * 4);
-  }
-
-  .page-rule {
-    height: 4px;
-    background-color: var(--color-accent);
-    border: none;
-    width: 120px;
-    margin: 0 auto;
   }
 
   .posts-list {

@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-accent);
+  color: var(--color-text-secondary);
   margin-bottom: calc(var(--grid-unit) * 2);
 }
 
@@ -181,7 +181,8 @@ hr {
   border: none;
   height: 4px;
   background-color: var(--color-accent);
-  margin: calc(var(--grid-unit) * 4) 0;
+  width: 50%;
+  margin: calc(var(--grid-unit) * 4) auto;
 }
 
 
