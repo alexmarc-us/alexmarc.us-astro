@@ -45,7 +45,6 @@ const { base = "" } = Astro.site
 
     <div class="site-title">
       <a href={base}>
-        <img src={base + "am.png"} alt={config.title} />
         <h1>Alex Marcus</h1>
       </a>
     </div>
@@ -208,14 +207,6 @@ const { base = "" } = Astro.site
     gap: calc(var(--grid-unit) * 3);
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
-  }
-
-  .site-title img {
-    height: 48px;
-    width: 48px;
-    background-color: transparent;
-    padding: 6px;
-    border: none;
   }
 
   .site-title h1 {
