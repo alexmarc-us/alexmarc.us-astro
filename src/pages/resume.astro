@@ -1,6 +1,6 @@
 ---
-import Layout from '../components/Layout.astro';
-import { config } from '../config';
+import Layout from "../components/Layout.astro";
+import { config } from "../config";
 
 const { author, social } = config;
 ---
@@ -13,34 +13,275 @@ const { author, social } = config;
       </div>
       <h2 class="author-name">{author.name}</h2>
       <p class="author-bio">{author.bio}</p>
-      
+
       <div class="social-links">
-        {social.github && (
-          <a href={social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-            </svg>
-          </a>
-        )}
-        {social.linkedin && (
-          <a href={social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
-        )}
-        {social.email && (
-          <a href={`mailto:${social.email}`} aria-label="Email">
-            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
-              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
-            </svg>
-          </a>
-        )}
+        {
+          social.email && (
+            <a href={`mailto:${social.email}`} aria-label="Email">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+              </svg>
+            </a>
+          )
+        }
+        {
+          social.linkedin && (
+            <a
+              href={social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+          )
+        }
+        {
+          social.github && (
+            <a
+              href={social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+          )
+        }
       </div>
+    </div>
+
+    <div class="content-section">
+      <h2>Summary</h2>
+      <p>
+        I am a software development engineer and team lead with 16 years of experience delivering modern web applications and leading engineering teams. My expertise spans UI/UX design, accessibility, and maintainable code, with a strong intuition for digital design principles that enables me to translate concepts into functional, user-friendly interfaces, even without dedicated design resources.
+      </p>
+      <p>
+        I excel at structuring complex projects, managing backlogs, and leading effective sprint cycles to ensure smooth, predictable delivery. My skills in cross-functional collaboration, product ownership, and team mentorship contribute to successful project outcomes and high-quality user experiences. I am adept at defining architecture, documenting complex systems, and driving projects to completion through clear communication and strong stakeholder alignment.
+      </p>
+      <p>
+        As a skilled communicator, I am comfortable leading team discussions, interfacing with stakeholders, and providing clear, actionable updates across all levels of an organization. I am highly effective at presenting technical solutions and live product demonstrations to both technical and non-technical audiences, fostering alignment and enthusiasm.
+      </p>
+
+      <h2>Skills</h2>
+      <h3>Front-End Web Development</h3>
+      <ul>
+        <li>ReactJS</li>
+        <li>TypeScript</li>
+        <li>JavaScript (ES6)</li>
+        <li>CSS3</li>
+        <li>HTML5</li>
+        <li>Responsive design</li>
+        <li>WebGL (ThreeJS)</li>
+        <li>AJAX</li>
+        <li>jQuery</li>
+        <li>REST API integration</li>
+        <li>Web Components</li>
+        <li>Unity 3D integration</li>
+      </ul>
+      <h3>UI/UX Implementation</h3>
+      <ul>
+        <li>Accessibility-first design</li>
+        <li>Stakeholder-driven UX improvements</li>
+        <li>Digital design principles</li>
+        <li>Design systems</li>
+        <li>Live product demonstrations</li>
+      </ul>
+      <h3>Team Leadership</h3>
+      <ul>
+        <li>Agile and Scrum practices</li>
+        <li>Sprint planning</li>
+        <li>Backlog management</li>
+        <li>Mentorship</li>
+        <li>Technical team management</li>
+        <li>Cross-team coordination</li>
+      </ul>
+      <h3>Cross-Functional Collaboration</h3>
+      <ul>
+        <li>Product ownership</li>
+        <li>Requirements gathering</li>
+        <li>Stakeholder alignment</li>
+        <li>Project management</li>
+        <li>Technical documentation</li>
+        <li>Collaboration with Product, Engineering, and Operations</li>
+      </ul>
+      <h3>Other Technical Skills</h3>
+      <ul>
+        <li>AI prompt engineering</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+        <li>Continuous integration (CI/CD)</li>
+        <li>Automated unit testing</li>
+        <li>Visual Studio</li>
+        <li>Database operations</li>
+      </ul>
+
+      <h2>Experience</h2>
+      <div>
+        <h3>
+          Application Development Lead
+          <span class="subhead">Starbucks Coffee Company: 2024 - Present</span>
+        </h3>
+        <ul>
+          <li>
+            Lead front-end engineering efforts across multiple project teams, owning both implementation and product direction for internal web applications used by thousands of Starbucks employees.
+          </li>
+          <li>
+            Craft production-ready user interfaces and design systems without reliance on dedicated designers, balancing engineering execution with user-centric design decisions.
+          </li>
+          <li>
+            Perform product ownership duties: define product roadmaps, manage backlogs, lead sprint ceremonies, and coordinate with stakeholders to ensure delivery of business-critical features.
+          </li>
+          <li>
+            Partner with cross-functional teams across Product, Engineering, and Operations to scope, architect, and deliver high-value internal tools aligned with business needs.
+          </li>
+        </ul>
+        <h3>
+          Certificate in Engineering Leadership
+          <span class="subhead">University of Washington: December 2024</span>
+        </h3>
+        <ul>
+          <li>
+            Completed a graduate-level program focused on leadership, communication, and strategic decision-making for engineering professionals.
+          </li>
+          <li>
+            Developed skills in technical team management, stakeholder engagement, and driving innovation within engineering organizations.
+          </li>
+        </ul>
+        <h3>
+          Senior Software Development Engineer
+          <span class="subhead">Expedia Group: 2022 - 2024</span>
+        </h3>
+        <ul>
+          <li>
+            Led a development team to execute feature enhancements for the Expedia partner integration platform, improving partner onboarding and internal tooling.
+          </li>
+          <li>
+            Improved deployment velocity and code quality by implementing robust testing and CI pipelines, reducing bug rates and time-to-market.
+          </li>
+          <li>
+            Collaborated closely with product managers and designers to define technical approaches aligned with business requirements, focusing on maintainable code and scalable UI architecture.
+          </li>
+          <li>
+            Mentored junior developers and interns, providing technical guidance and professional development support within the team.
+          </li>
+        </ul>
+        <h3>
+          Certificate in Project Management
+          <span class="subhead">Coursera: February 2024</span>
+        </h3>
+        <ul>
+          <li>
+            Earned certification through Coursera’s Project Management Professional program, covering agile methodologies, risk management, and project planning.
+          </li>
+          <li>
+            Enhanced ability to lead cross-functional teams, manage project timelines, and deliver business-critical outcomes.
+          </li>
+        </ul>
+        <h3>
+          Software Development Engineer
+          <span class="subhead">Adobe, Inc.: 2018 - 2022</span>
+        </h3>
+        <ul>
+          <li>
+            Developed front-end applications and integrated features into Adobe’s Creative Cloud suite, including Photoshop, Illustrator, and InDesign, supporting file sharing and collaboration workflows.
+          </li>
+          <li>
+            Built customer-facing web applications for Adobe Express using ReactJS, connecting to internal REST APIs and improving product value for new customers.
+          </li>
+          <li>
+            Defined frontend architecture for scalable web component interfaces, shortening integration timelines for internal and external teams.
+          </li>
+          <li>
+            Managed cross-team technical discussions and backlog prioritization, ensuring alignment across Product, Engineering, and Partner teams.
+          </li>
+        </ul>
+        <h3>
+          Software Development Team Lead
+          <span class="subhead">Level 11 Consulting: 2015 - 2018</span>
+        </h3>
+        <ul>
+          <li>
+            Led frontend and full-stack development for 3D interactive web applications, delivering mapping and navigation tools for Carnival Cruise ships on both mobile and large, touch-enabled screens.
+          </li>
+          <li>
+            Delivered browser-based WebGL (React, ThreeJS) and Unity 3D versions of applications, with responsibility for technical execution and deployment logistics.
+          </li>
+          <li>
+            Presented live product demos at CES 2017, contributing to high-profile project success.
+          </li>
+          <li>
+            Coordinated with clients, engineers, and designers to deliver polished interactive user experiences deployed to both mobile and large-format displays.
+          </li>
+        </ul>
+        <h3>
+          Web Developer
+          <span class="subhead">Sur La Table, Inc.: 2013 – 2015</span>
+        </h3>
+        <ul>
+          <li>
+            Designed, developed, tested, troubleshot, and debugged mobile and desktop e-commerce applications using HTML, CSS, JavaScript, jQuery, and AJAX in Visual Studio. Projects included:
+            <ul>
+              <li>
+                Hand-coded global site header with multi-tiered navigation, reactive browsing, and custom styling.
+              </li>
+              <li>
+                Splash layouts, product comparison charts, product anatomies, and more.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Leveraged A/B user testing with Monetate in collaboration with internal and external marketing teams.
+          </li>
+        </ul>
+        <h3>
+          Web Developer
+          <span class="subhead">ShapeUp, Inc.: Jan. 2011 – May 2013</span>
+        </h3>
+        <ul>
+          <li>
+            Developed code using modern HTML, CSS, and JavaScript display techniques, as well as scalable PHP and MySQL logic linked via AJAX exchanges, to create stand-alone and integrated MVC components such as:
+            <ul>
+              <li>
+                Organization-grouped social network functionality, including supporter searching, compatibility-based supporter suggestions, scoped privacy settings, and a comprehensive profanity filter.
+              </li>
+              <li>
+                Administrative panels providing intricate database operations through a concise user interface, allowing in-depth user management, eligibility maintenance, frontpage banner editing, and more.
+              </li>
+              <li>
+                Customizable newsletter generation and preview with integrated, up-to-date platform statistics.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Contributed to continuous integration with automated unit testing in an agile development cycle.
+          </li>
+          <li>
+            Received, escalated, and resolved over 2,700 technical incident tickets per year regarding browser compatibility, UI issues, backend logic, and database problems from over 600,000 international users.
+          </li>
+        </ul>
+      </div>
+      <h3>
+        Bachelor of Arts in Computer Science and Visual Design
+        <span class="subhead">Connecticut College: May 2010</span>
+      </h3>
+      <ul>
+        <li>
+          Interdisciplinary degree combining computer science fundamentals with visual design principles and digital media.
+        </li>
+        <li>
+          Built a strong foundation in software engineering, user interface design, and creative problem-solving.
+        </li>
+      </ul>
     </div>
   </div>
 </Layout>
+
 
 <style>
   .resume-page {
@@ -87,7 +328,7 @@ const { author, social } = config;
     font-family: var(--font-heading-secondary);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--color-accent);
+    color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: calc(var(--grid-unit) * 2);
@@ -96,7 +337,7 @@ const { author, social } = config;
   .author-bio {
     font-size: 1.25rem;
     line-height: 1.6;
-    color: var(--color-text-secondary);
+    color: var(--color-text-muted);
     max-width: 600px;
     margin: 0 auto calc(var(--grid-unit) * 4);
   }
@@ -109,8 +350,10 @@ const { author, social } = config;
   }
 
   .social-links a {
-    color: var(--color-text-secondary);
-    transition: color 0.2s ease, transform 0.2s ease;
+    color: var(--color-text-primary);
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
   }
 
   .social-links a:hover {
@@ -138,20 +381,34 @@ const { author, social } = config;
     margin-bottom: calc(var(--grid-unit) * 3);
   }
 
+  .content-section span.subhead {
+    display: block;
+    font-size: 1rem;
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+    margin-top: calc(var(--grid-unit) * 0.5);
+    text-transform: none;
+  }
+
+  .content-section h3 {
+    margin-top: calc(var(--grid-unit) * 2);
+    font-size: 1.2rem;
+  }
+
   .content-section p {
     font-size: 1.125rem;
     line-height: 1.6;
     color: var(--color-text-primary);
     margin-bottom: calc(var(--grid-unit) * 3);
+    text-indent: calc(var(--grid-unit) * 3);
   }
 
   .content-section ul {
-    margin: calc(var(--grid-unit) * 2) 0;
     padding-left: calc(var(--grid-unit) * 3);
   }
 
   .content-section li {
-    margin-bottom: calc(var(--grid-unit) * 2);
+    margin-bottom: calc(var(--grid-unit));
     font-size: 1.125rem;
     line-height: 1.6;
   }

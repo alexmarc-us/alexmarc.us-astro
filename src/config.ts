@@ -21,7 +21,7 @@ export const config: SiteConfig = {
   description: "The portfolio of Alex Marcus showcasing projects in software development, visual design, and more.",
   author: {
     name: "Alex Marcus",
-    bio: "A software development lead and user experience expert joining the worlds of technology, design, and leadership to deliver innovative applications.",
+    bio: "A software development lead and user experience expert joining the worlds of technology, design, and leadership to deliver innovative applications. Living near Seattle, WA.",
     avatar: "/photos/headshot.jpg"
   },
   social: {
