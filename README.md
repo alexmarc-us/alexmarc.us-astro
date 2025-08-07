@@ -47,9 +47,9 @@ The landing page, providing a high-level introduction to me and the site's conte
 - Skill list
 - Latest post/project updates
 
-### Resume
+### Profile
 
-My online, dynamic resume. Gives me an opportunity to expand on my professional experience by sprinkling in personal projects, volunteer efforts, links, and examples in the Project and Posts.
+My online, dynamic profile. Gives me an opportunity to expand on my professional experience by sprinkling in personal projects, volunteer efforts, links, and examples in the Project and Posts.
 
 ### Projects
 

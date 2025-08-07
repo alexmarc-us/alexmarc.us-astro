@@ -57,17 +57,16 @@ const { base = "" } = Astro.site
       >
         <ul class="nav-list">
           {
-            ["Home", "Resume", "Posts", "Projects"].map((label, i) => {
+            ["Home", "Profile", "Projects"].map((label, i) => {
               const paths = [
                 base,
-                base + "resume",
-                base + "posts",
+                base + "profile",
                 base + "projects",
               ];
               const isActive =
                 label === "Home"
                   ? Astro.url.pathname === paths[0]
-                  : label === "Resume"
+                  : label === "Profile"
                     ? Astro.url.pathname === paths[1]
                     : Astro.url.pathname.startsWith(paths[i]);
               return (
@@ -92,17 +91,16 @@ const { base = "" } = Astro.site
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <ul class="mobile-nav-list">
     {
-      ["Home", "Resume", "Posts", "Projects"].map((label, i) => {
+      ["Home", "Profile", "Projects"].map((label, i) => {
         const paths = [
           base,
-          base + "resume",
-          base + "posts",
+          base + "profile",
           base + "projects",
         ];
         const isActive =
           label === "Home"
             ? Astro.url.pathname === paths[0]
-            : label === "Resume"
+            : label === "Profile"
               ? Astro.url.pathname === paths[1]
               : Astro.url.pathname.startsWith(paths[i]);
         return (

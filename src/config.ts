@@ -9,7 +9,7 @@ export interface SiteConfig {
   social: {
     github?: string;
     twitter?: string;
-    instagram?: string;
+    youtube?: string;
     linkedin?: string;
     email?: string;
   };
@@ -27,7 +27,8 @@ export const config: SiteConfig = {
   social: {
     github: "https://github.com/alexmarc-us/",
     linkedin: "https://www.linkedin.com/in/amarcus/",
-    email: "mr@alexmarc.us"
+    email: "mr@alexmarc.us",
+    youtube: "https://www.youtube.com/@optimarcusprime"
   },
   siteUrl: "https://alexmarc.us/"
 };
