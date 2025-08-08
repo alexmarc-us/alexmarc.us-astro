@@ -5,7 +5,11 @@ import { config } from "../config";
 const { author, social } = config;
 ---
 
-<Layout title="Profile" showSidebar={false} description="Profile of Alex Marcus.">
+<Layout
+  title="Profile"
+  showSidebar={false}
+  description="Profile of Alex Marcus."
+>
   <div class="profile-page">
     <div class="author-section">
       <div class="author-avatar">
@@ -59,34 +63,27 @@ const { author, social } = config;
     <div class="content-section">
       <h2>Summary</h2>
       <p>
-        I am a software development engineer and team lead with 16 years of
-        experience delivering modern web applications and leading engineering
-        teams. My expertise spans UI/UX design, accessibility, and maintainable
-        code, with a strong intuition for digital design principles that enables
-        me to translate concepts into functional, user-friendly interfaces, even
-        without dedicated design resources.
+        Software development engineer and team lead with 16 years of experience
+        delivering modern web applications and leading engineering teams.
+        Skilled in UI/UX design, accessibility, and maintainable code,
+        translating concepts into functional interfaces without dedicated design
+        resources.
       </p>
       <p>
-        I excel at structuring complex projects, managing backlogs, and leading
-        effective sprint cycles to ensure smooth, predictable delivery. My
-        skills in cross-functional collaboration, product ownership, and team
-        mentorship contribute to successful project outcomes and high-quality
-        user experiences. I am adept at defining architecture, documenting
-        complex systems, and driving projects to completion through clear
-        communication and strong stakeholder alignment.
+        Experienced in structuring complex projects, managing backlogs, and
+        leading sprint cycles for predictable delivery. Strong in
+        cross-functional collaboration, product ownership, team mentorship, and
+        technical documentation.
       </p>
       <p>
-        As a skilled communicator, I am comfortable leading team discussions,
-        interfacing with stakeholders, and providing clear, actionable updates
-        across all levels of an organization. I am highly effective at
-        presenting technical solutions and live product demonstrations to both
-        technical and non-technical audiences, fostering alignment and
-        enthusiasm.
+        Effective communicator, comfortable leading discussions, interfacing
+        with stakeholders, and presenting technical solutions to diverse
+        audiences.
       </p>
 
       <h2>Skills</h2>
       <h3>Front-End Web Development</h3>
-      <ul>
+      <ul class="skills-list">
         <li>ReactJS</li>
         <li>TypeScript</li>
         <li>JavaScript (ES6)</li>
@@ -98,18 +95,18 @@ const { author, social } = config;
         <li>jQuery</li>
         <li>REST API integration</li>
         <li>Web Components</li>
-        <li>Unity 3D integration</li>
+        <li>Unity 3D</li>
       </ul>
       <h3>UI/UX Implementation</h3>
-      <ul>
+      <ul class="skills-list">
         <li>Accessibility-first design</li>
-        <li>Stakeholder-driven UX improvements</li>
+        <li>Stakeholder-driven UX iterations</li>
         <li>Digital design principles</li>
         <li>Design systems</li>
         <li>Live product demonstrations</li>
       </ul>
       <h3>Team Leadership</h3>
-      <ul>
+      <ul class="skills-list">
         <li>Agile and Scrum practices</li>
         <li>Sprint planning</li>
         <li>Backlog management</li>
@@ -118,7 +115,7 @@ const { author, social } = config;
         <li>Cross-team coordination</li>
       </ul>
       <h3>Cross-Functional Collaboration</h3>
-      <ul>
+      <ul class="skills-list">
         <li>Product ownership</li>
         <li>Requirements gathering</li>
         <li>Stakeholder alignment</li>
@@ -127,13 +124,12 @@ const { author, social } = config;
         <li>Collaboration with Product, Engineering, and Operations</li>
       </ul>
       <h3>Other Technical Skills</h3>
-      <ul>
+      <ul class="skills-list">
         <li>AI prompt engineering</li>
         <li>PHP</li>
         <li>MySQL</li>
         <li>Continuous integration (CI/CD)</li>
         <li>Automated unit testing</li>
-        <li>Visual Studio</li>
         <li>Database operations</li>
       </ul>
 
@@ -543,6 +539,21 @@ const { author, social } = config;
     margin-bottom: calc(var(--grid-unit));
     font-size: 1.125rem;
     line-height: 1.6;
+    list-style-type: square;
+  }
+
+  .content-section ul.skills-list {
+    margin-top: calc(var(--grid-unit) * 2);
+  }
+
+  .content-section ul.skills-list li {
+    display: inline;
+    width: 50%;
+    float: left;
+  }
+
+  .content-section ul.skills-list li:last-of-type {
+    float: none;
   }
 
   .content-section strong {
