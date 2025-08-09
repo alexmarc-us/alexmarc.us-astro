@@ -64,8 +64,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
         <p class="post-excerpt">{frontmatter.excerpt}</p>
       )}
       
-      <!-- Monumental Blood Red Rule -->
-      <hr class="monumental-rule" />
+      <hr />
     </header>
 
     <TableOfContents headings={tocHeadings} />
@@ -172,14 +171,6 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
     color: var(--color-text-secondary);
     font-style: italic;
     margin: 0;
-  }
-
-  .monumental-rule {
-    height: 6px;
-    background-color: var(--color-accent);
-    border: none;
-    margin: calc(var(--grid-unit) * 4) 0;
-    width: 100%;
   }
 
   .post-content {
