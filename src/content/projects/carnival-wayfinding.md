@@ -2,7 +2,7 @@
 title: "Carnival Cruise Lines Wayfinding"
 date: "03-01-2018"
 description: "Built and delivered a wayfinding system for Carnival Cruise Lines using web and Unity3D technologies."
-categories: ["code", "research"]
+categories: ["code"]
 tags: ["wayfinding", "Unity3D", "WebGL", "Node.js", "React", "maps", "team lead", "UX"]
 ---
 

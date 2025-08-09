@@ -2,7 +2,7 @@
 title: "Flownet"
 date: "12-01-2007"
 description: "Created a redundant backup system for Unix servers using SCP and rsync."
-categories: ["code", "automation"]
+categories: ["code"]
 tags: ["Unix", "backup", "shell script", "SCP", "rsync", "network", "automation"]
 ---
 Flownet is a Unix-based redundant backup system, which I developed during a Computer Science Research Seminars at [Connecticut College](http://www.conncoll.edu/).  It was an experiment in Unix operating systems, Bash commands, backup application development, network design, and automation.

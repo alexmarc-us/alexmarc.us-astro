@@ -69,21 +69,17 @@ const publishedTime = frontmatter.date
         </time>
 
         {
-          frontmatter.categories && frontmatter.categories.length > 0 && (
-            <div class="post-categories">
-              {frontmatter.categories.map((category: string) => (
-                <a
-                  href={`${base}/categories/${category.toLowerCase()}`}
-                  class="category-tag"
-                >
-                  {category}
-                </a>
-              ))}
+          frontmatter.tags && frontmatter.tags.length > 0 && (
+            <div class="post-tags">
+              <div class="tag-list">
+                {frontmatter.tags.map((tag: string) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
             </div>
           )
         }
       </div>
-      <hr />
     </header>
 
     <TableOfContents headings={tocHeadings} />
@@ -93,19 +89,6 @@ const publishedTime = frontmatter.date
     </div>
 
     <footer class="post-footer">
-      {
-        frontmatter.tags && frontmatter.tags.length > 0 && (
-          <div class="post-tags">
-            <span class="tags-label">Tags:</span>
-            <div class="tag-list">
-              {frontmatter.tags.map((tag: string) => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
-          </div>
-        )
-      }
-
       <div class="post-navigation">
         <a href={`${base}projects`} class="back-to-project"
           >← Back to Projects</a
@@ -148,44 +131,6 @@ const publishedTime = frontmatter.date
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-  }
-
-  .post-reading-time {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .post-reading-time::before {
-    content: "•";
-    margin: 0 calc(var(--grid-unit));
-    color: var(--color-border);
-  }
-
-  .post-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(var(--grid-unit));
-  }
-
-  .category-tag {
-    background-color: var(--color-text-primary);
-    color: white;
-    padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 3px;
-    transition: background-color 0.2s ease;
-  }
-
-  .category-tag:hover,
-  .category-tag:focus {
-    background-color: var(--color-accent);
-    text-decoration: none;
   }
 
   .post-content {
@@ -365,6 +310,18 @@ const publishedTime = frontmatter.date
     gap: calc(var(--grid-unit));
   }
 
+  .tag {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+  }
+
   .tags-label {
     font-family: var(--font-heading-secondary);
     font-weight: 700;
@@ -378,17 +335,6 @@ const publishedTime = frontmatter.date
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--grid-unit));
-  }
-
-  .tag {
-    background-color: var(--color-text-primary);
-    color: white;
-    padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 3px;
   }
 
   .back-to-project {
