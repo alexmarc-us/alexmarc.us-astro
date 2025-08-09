@@ -1,7 +1,9 @@
 ---
 title: "Adobe Express"
 date: "05-01-2021"
-tags: []
+description: "Engineered quick actions and features for Adobe Express using modern web technologies."
+categories: ["code"]
+tags: ["web components", "Lit", "micro-frontend", "PWA", "user feedback"]
 ---
 
 In 2021 I moved to Adobe Express software engineering after working in the Adobe Cloud Collaboration team for several years.  I was very excited to contribute to Adobe creative software.  Express is a web-first product, which allowed me to directly improve the capabilities of creative professionals.

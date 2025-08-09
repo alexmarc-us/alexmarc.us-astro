@@ -1,8 +1,11 @@
 ---
 title: "ShapeUp Health Platform"
 date: "01-02-2013"
-tags: []
+description: "Built and improved features for ShapeUp's health platform, including widgets and support tools."
+categories: ["code"]
+tags: ["PHP", "MySQL", "HTML", "CSS", "widget", "calendar", "search", "form", "algorithm"]
 ---
+
 ShapeUp was my first professional tech job outside of my college environment, and it launched me into a career of software engineering across a full stack of technologies. Their activity-tracking social platform utilized user participation and organization-level events to encourage healthy employee lifestyles.
 
 During my time at ShapeUp I was tasked with a number of different projects. Each contributed a user-facing component, and I was responsible for contributing to the entire product from inception, to definition, to design, to development and delivery.

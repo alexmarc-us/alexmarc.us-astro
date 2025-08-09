@@ -1,7 +1,9 @@
 ---
 title: "Adobe Cloud Collaboration"
 date: "10-01-2019"
-tags: []
+description: "Developed sharing and commenting components for Adobe Creative Cloud to facilitate collaboration."
+categories: ["code"]
+tags: ["cloud", "collaboration", "web", "native", "permissions", "notifications"]
 ---
 
 Within the Adobe Creative Cloud Experience group, I made components which enable collaboration between creatives and the people they create for. We used a large number of cloud infrastructure solutions, as well as web and native technologies.

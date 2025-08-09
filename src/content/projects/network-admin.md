@@ -1,10 +1,11 @@
 ---
 title: "Student Network Administration"
 date: "06-01-2009"
-tags: []
+description: "Managed network operations and built tools for password and contact synchronization at Connecticut College."
+categories: ["IT", "code"]
+tags: ["network", "LDAP", "Gmail", "Active Directory", "XML", "cURL", "Google API", "admin"]
 ---
-
-While a student at Connecticut College, and for a few months after graduation, I functioned as the assistant network administrator for the college. This position allowed me to gain a great number of skills: physical and virtual network repair, hardware maintenance, network switch administration, and wireless network configuration and maintenance.
+While a student at Connecticut College, I worked as the assistant network administrator for the college. This position allowed me to gain a great number of skills: physical and virtual network repair, hardware maintenance, network switch administration, and wireless network configuration and maintenance.
 
 I was responsible for resolving campus wide network outages, and helped to develop tools for monitoring and resolving these issues. When an issue could not be resolved via software, I repaired various network hardware, such as switches, ports, and hubs, on my own.
 

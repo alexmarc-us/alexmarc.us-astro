@@ -1,7 +1,9 @@
 ---
 title: "Find-A-Plant Database"
 date: "06-01-2010"
-tags: []
+description: "Developed a MySQL and JavaScript-powered plant database for public and admin use."
+categories: ["code"]
+tags: ["MySQL", "JavaScript", "XML", "admin panel", "CSV", "Arboretum"]
 ---
 
 The [Connecticut College Arboretum](https://www.conncoll.edu/the-arboretum/) has over 6,000 plants on its campus.  As part of the effort to catalog and organize these plants in a publicly-accessible manner, I created a web-based plant database.

@@ -1,7 +1,9 @@
 ---
 title: "Expedia Open World"
 date: "04-01-2023"
-tags: []
+description: "Led engineering for Expedia Open World, developing full-stack solutions and Slack bot integrations."
+categories: ["code"]
+tags: ["full-stack", "APIs", "NodeJS", "authorization", "Slack", "mentoring"]
 ---
 
 At [Expedia Group](https://expediagroup.com/) I worked as a Senior Software engineer, guiding a team of engineers toward developing a scalable, production-ready technology platform. This solution involved implementing full-stack software integrated with Expedia Group APIs, including: 

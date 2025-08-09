@@ -1,7 +1,9 @@
 ---
 title: "TJX Companies Internship"
 date: "08-01-2007"
-tags: []
+description: "Worked in IT and network security at TJX Companies, focusing on hardware and switch configuration."
+categories: ["code", "security"]
+tags: ["IT", "network security", "Cisco", "Telnet", "hardware", "data breach"]
 ---
 
 My first experience with the "real world" of tech work came from [TJX Companies](https://www.tjx.com/). I was an intern there in the summer of 2007, working in both the Desktop Services and Network Security organizations.

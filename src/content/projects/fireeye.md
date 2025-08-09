@@ -1,7 +1,9 @@
 ---
 title: "FireEye Malware Detection"
 date: "02-01-2008"
-tags: []
+description: "Installed and analyzed FireEye malware detection for campus network security research."
+categories: ["code", "research", "security"]
+tags: ["malware", "network security", "data analysis", "IT", "seminar"]
 ---
 [FireEye](https://www.fireeye.com/) is a US network security company that specializes in advanced protection against a variety of cyber threats.  Their main software line consists of the Malware Protection System for web security, email security, file security, and malware analysis.
 

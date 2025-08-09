@@ -1,7 +1,9 @@
 ---
 title: "Carnival Cruise Lines Wayfinding"
 date: "03-01-2018"
-tags: []
+description: "Built and delivered a wayfinding system for Carnival Cruise Lines using web and Unity3D technologies."
+categories: ["code", "research"]
+tags: ["wayfinding", "Unity3D", "WebGL", "Node.js", "React", "maps", "team lead", "UX"]
 ---
 
 During my time as a Senior Developer and Team Lead at Level 11, I played an integral role in the ideation, build, delivery, and support of a Wayfinding system for Carnival Cruise Lines. This system is a key part of the [OCEAN](https://www.ocean.com/ocean/) user experience aboard Carnival's Medallion-Class ships, and is known to guests as Ocean NAV.

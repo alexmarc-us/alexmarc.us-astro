@@ -1,8 +1,11 @@
 ---
 title: "ChatDev"
 date: "11-01-2008"
-tags: []
+description: "Created ChatDev, a Python chat protocol and client for research on XMPP communication."
+categories: ["code", "research"]
+tags: ["Python", "XMPP", "chat", "socket", "multithread", "peer-to-peer", "command line"]
 ---
+
 I coded ChatDev for my second semester of Computer Science Research Seminar at Connecticut College.  During this research period, I took an in-depth at how chat protocols, specifically XMPP, facilitate communication between users by utilizing socket connections, a centralized multithread server, and peer-to-peer messaging.
 
 ChatDev is a chat protocol and command line client for sending text communications, written in Python. The ChatDev code is available via GitHub at https://github.com/alexmarc-us/ChatDev.

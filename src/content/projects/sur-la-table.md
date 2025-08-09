@@ -1,7 +1,9 @@
 ---
 title: "Sur La Table Retail Website"
 date: "05-01-2015"
-tags: []
+description: "Built and improved Sur La Table's retail website, blog, and gift card experience."
+categories: ["code"]
+tags: ["WordPress", "HTML", "CSS", "JavaScript", "Oracle", "eCommerce", "blog", "gift cards", "UI"]
 ---
 
 I worked for the headquarters of the high-end kitchen retailer [Sur La Table](https://www.surlatable.com/) as their lead front-end web developer. I was responsible for building user experiences on top of their enterprise eCommerce platform which would drive engagement and purchases.

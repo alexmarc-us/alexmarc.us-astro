@@ -17,13 +17,12 @@ export interface Props {
   title: string;
   description?: string;
   showSidebar?: boolean;
-  image?: string;
   type?: 'website' | 'article';
   publishedTime?: string;
   canonical?: string;
 }
 
-const { title, description, showSidebar = true, image, type, publishedTime, canonical } = Astro.props;
+const { title, description, showSidebar = true, type, publishedTime, canonical } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -35,7 +34,6 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
     <SEO
       title={title}
       description={description}
-      image={image}
       type={type}
       publishedTime={publishedTime}
       canonical={canonical}

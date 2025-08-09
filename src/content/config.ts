@@ -6,11 +6,8 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
-    excerpt: z.string().optional(),
     categories: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),
-    author: z.string().default('Anonymous'),
-    image: z.string().optional(),
   }),
 });
 

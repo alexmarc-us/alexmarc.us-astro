@@ -1,7 +1,9 @@
 ---
 title: "Manette Neighborhood Coalition Website"
 date: "10-01-2018"
-tags: []
+description: "Developed and maintained a Wordpress site for community events and news."
+categories: ["code"]
+tags: ["Wordpress", "branding", "calendar", "email", "logo", "community"]
 ---
 I volunteered for the Manette Neighborhood Coalition as the Technology Officer.  My first task was to revamp their out-of-date website. Working alongside my fellow board members, I created a brand identity and developed a Wordpress site.
 
