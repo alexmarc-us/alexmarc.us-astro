@@ -19,7 +19,7 @@ const sortedPosts = allPosts
       <p class="project-description">
         A collection of my favorite projects.
       </p>
-      <hr class="project-rule" />
+      <hr />
     </header>
 
     {sortedPosts.length > 0 ? (
@@ -51,7 +51,7 @@ const sortedPosts = allPosts
               <p class="post-excerpt">{post.frontmatter.excerpt}</p>
             )}
             
-            <a href={`${base}/projects/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}`} class="read-more">Read More →</a>
+            <a href={`${base}projects/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}`} class="read-more">Read More →</a>
           </article>
         ))}
       </div>
@@ -74,36 +74,6 @@ const sortedPosts = allPosts
     margin-bottom: calc(var(--grid-unit) * 8);
   }
 
-  .project-title {
-    font-family: var(--font-heading-primary);
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 1.1;
-    margin-bottom: calc(var(--grid-unit) * 3);
-  }
-
-  .project-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin-bottom: calc(var(--grid-unit) * 4);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  .project-rule {
-    height: 4px;
-    background-color: var(--color-accent);
-    border: none;
-    width: 120px;
-    margin: 0 auto;
-  }
-
   .posts-list {
     display: flex;
     flex-direction: column;
@@ -118,13 +88,6 @@ const sortedPosts = allPosts
   .post-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
-  }
-
-  .post-title {
-    font-family: var(--font-heading-secondary);
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: calc(var(--grid-unit) * 2);
   }
 
   .post-title a {

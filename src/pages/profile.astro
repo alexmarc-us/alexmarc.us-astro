@@ -18,7 +18,8 @@ const { author, social } = config;
     const headerHeight = header ? (header as HTMLElement).offsetHeight : 0;
     const el = document.getElementById(sectionId);
     if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+      const y =
+        el.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   }
@@ -64,7 +65,7 @@ const { author, social } = config;
           audiences.
         </p>
       </div>
-
+      <hr />
       <div id="Skills">
         <h2>Skills</h2>
         <h3>Front-End Web Development</h3>
@@ -118,7 +119,7 @@ const { author, social } = config;
           <li>Database operations</li>
         </ul>
       </div>
-
+      <hr />
       <div id="Experience">
         <h2>Experience</h2>
         <div>
