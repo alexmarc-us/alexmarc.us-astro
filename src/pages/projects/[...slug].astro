@@ -2,7 +2,6 @@
 import Layout from '../../components/Layout.astro';
 import TableOfContents from '../../components/TableOfContents.astro';
 import { extractHeadings, filterHeadingsForTOC } from '../../utils/table-of-contents';
-import { calculateReadingTime, extractTextFromMarkdown } from '../../utils/reading-time';
 
 export async function getStaticPaths() {
   // Support both .md and .mdx files
@@ -14,19 +13,17 @@ export async function getStaticPaths() {
   return allPosts.map((post: any) => {
     // For import.meta.glob, access raw content through compiledContent or body
     const rawContent = post.body || post.rawContent?.() || '';
-    const plainText = extractTextFromMarkdown(rawContent);
-    const readingTime = calculateReadingTime(plainText);
     const allHeadings = extractHeadings(rawContent);
     const tocHeadings = filterHeadingsForTOC(allHeadings);
     
     return {
       params: { slug: post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '') },
-      props: { post, readingTime, tocHeadings }
+      props: { post, tocHeadings }
     };
   });
 }
 
-const { post, readingTime, tocHeadings } = Astro.props;
+const { post, tocHeadings } = Astro.props;
 const { frontmatter, Content } = post as any;
 
 const pageTitle = frontmatter.title;
@@ -48,13 +45,10 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
         <time class="post-date" datetime={frontmatter.date}>
           {new Date(frontmatter.date).toLocaleDateString('en-US', {
             year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+            month: 'long'
           })}
         </time>
-        
-        <span class="post-reading-time">{readingTime}</span>
-        
+                
         {frontmatter.categories && frontmatter.categories.length > 0 && (
           <div class="post-categories">
             {frontmatter.categories.map((category: string) => (
@@ -93,7 +87,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
       )}
       
       <div class="post-navigation">
-        <a href={`${base}/projects`} class="back-to-project">← Back to Project</a>
+        <a href={`${base}projects`} class="back-to-project">← Back to Projects</a>
       </div>
     </footer>
   </article>
@@ -113,7 +107,6 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
     font-family: var(--font-heading-primary);
     font-size: 3rem;
     font-weight: 900;
-    color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1;

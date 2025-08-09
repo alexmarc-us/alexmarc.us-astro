@@ -1,8 +1,5 @@
 ---
-title: "Template title"
-date: "2025-06-08"
-description: "Template description"
-excerpt: "Template exerpt"
-categories: [""]
-tags: [""]
+title: ""
+date: "01-01-2025"
+tags: []
 ---
