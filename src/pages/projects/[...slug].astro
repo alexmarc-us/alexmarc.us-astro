@@ -1,10 +1,5 @@
 ---
 import Layout from "../../components/Layout.astro";
-import TableOfContents from "../../components/TableOfContents.astro";
-import {
-  extractHeadings,
-  filterHeadingsForTOC,
-} from "../../utils/table-of-contents";
 
 export async function getStaticPaths() {
   // Support both .md and .mdx files
@@ -20,12 +15,7 @@ export async function getStaticPaths() {
     ...Object.values(mdxPostsGlob),
   ] as any[];
 
-  return allPosts.map((post: any) => {
-    // For import.meta.glob, access raw content through compiledContent or body
-    const rawContent = post.body || post.rawContent?.() || "";
-    const allHeadings = extractHeadings(rawContent);
-    const tocHeadings = filterHeadingsForTOC(allHeadings);
-
+  return allPosts.map((post: any) => {    
     return {
       params: {
         slug: post.file
@@ -33,12 +23,12 @@ export async function getStaticPaths() {
           .pop()
           ?.replace(/\.(md|mdx)$/, ""),
       },
-      props: { post, tocHeadings },
+      props: { post },
     };
   });
 }
 
-const { post, tocHeadings } = Astro.props;
+const { post } = Astro.props;
 const { frontmatter, Content } = post as any;
 
 const pageTitle = frontmatter.title;
@@ -81,8 +71,6 @@ const publishedTime = frontmatter.date
         }
       </div>
     </header>
-
-    <TableOfContents headings={tocHeadings} />
 
     <div class="post-content">
       <Content />
@@ -320,15 +308,6 @@ const publishedTime = frontmatter.date
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-radius: 2px;
-  }
-
-  .tags-label {
-    font-family: var(--font-heading-secondary);
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text-primary);
   }
 
   .tag-list {

@@ -44,22 +44,6 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
       </ul>
     </section>
   )}
-
-  <!-- Categories Section -->
-  {categories.length > 0 && (
-    <section class="categories">
-      <h3 class="section-title">Categories</h3>
-      <ul class="category-list">
-        {categories.map(category => (
-          <li class="category-item">
-            <a href={`${base}/categories/${category.toLowerCase()}`} class="category-link">
-              {category}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
 </div>
 
 <style>
@@ -71,12 +55,11 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 4px;
+    margin-bottom: calc(var(--grid-unit) * 3);
   }
 
   .bio-section {
     text-align: center;
-    padding-bottom: calc(var(--grid-unit) * 2);
-    border-bottom: 1px solid var(--color-border);
   }
 
   .avatar-container {
