@@ -29,7 +29,7 @@ const sortedPosts = allPosts.sort(
 >
   <div class="project-page">
     <header class="project-header">
-      <h1 class="project-title">Projects</h1>
+      <h2 class="project-title">Projects</h2>
       <p class="project-description">A collection of my favorite projects.</p>
       <hr />
     </header>
@@ -47,9 +47,9 @@ const sortedPosts = allPosts.sort(
               style="display: block; text-decoration: none;"
             >
               <article style="pointer-events: none;">
-                <h2 class="post-title" style="pointer-events: auto;">
+                <h3 class="post-title" style="pointer-events: auto;">
                   {post.frontmatter.title}
-                </h2>
+                </h3>
 
                 <div class="post-meta">
                   <time class="post-date" datetime={post.frontmatter.date}>
@@ -125,8 +125,8 @@ const sortedPosts = allPosts.sort(
 
   a.post-item:hover,
   a.post-item:focus,
-  a.post-item:hover h2,
-  a.post-item:focus h2 {
+  a.post-item:hover h3,
+  a.post-item:focus h3 {
     color: var(--color-accent);
   }
 

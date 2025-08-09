@@ -35,10 +35,13 @@ const sortedPosts = allPosts
       <div class="hero-content">
         <h1 class="hero-title">Hi there, I'm Alex.</h1>
         <p class="hero-description">
-          I'm a senior software engineer and team lead. <br /> I build code and teams that deliver innovative, enjoyable experiences.
+          I'm a senior software engineer and team lead. <br /> I build code and teams
+          that deliver innovative, enjoyable experiences.
         </p>
         <p class="hero-description">
-          This site contains my <a href="/profile">profile</a> and favorite <a href="/projects">projects</a>.
+          This site contains my <a href="/profile">profile</a> and favorite <a
+            href="/projects">projects</a
+          >.
         </p>
         <h2 class="hero-subtitle">Let's connect!</h2>
         <div class="social-links">
@@ -179,7 +182,6 @@ const sortedPosts = allPosts
     margin-top: calc(var(--grid-unit) * 4);
   }
 
-
   .social-links {
     width: 100%;
     display: flex;
@@ -213,10 +215,17 @@ const sortedPosts = allPosts
     height: 30px;
   }
 
-
   @media (max-width: 768px) {
+    .hero {
+      padding: calc(var(--grid-unit) * 4);
+    }
+    .hero-content {
+      max-width: none;
+      margin: 0 auto;
+      padding: 0 0;
+    }
     .hero-title {
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     .hero-subtitle {

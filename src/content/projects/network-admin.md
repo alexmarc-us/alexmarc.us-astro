@@ -11,8 +11,8 @@ I was responsible for resolving campus wide network outages, and helped to devel
 
 During my time as the Student Network Administrator, I gained a great appreciation and understanding of how a large network is constructed and maintained, as well as a lasting ability to deliver first-hand technical assistance to users of all skill levels. In addition to my ongoing network maintenance work, I contributed to several campus system improvement projects.
 
-## Active Directory to Gmail Password Update
+### Active Directory to Gmail Password Update
 Once the Connecticut College email system had been converted to Gmail, they needed a method to keep the users’ Active Directory passwords synced with their Gmail passwords. So, utilizing the LDAP protocol and Google’s API, I designed and implemented a web-based solution which allowed one page to simultaneously update each of these systems’ passwords. This system was used by the ConnColl IT department for years to smoothly transfer the population to the new mail system and solve any password issues that arose.
 
-## Gmail Contact Retrieval
+### Gmail Contact Retrieval
 When Connecticut College switched its 4,000+ active email users to Gmail, the accounts needed to be converted to the new system. I wrote a script, utilizing LDAP protocol, XML, cURL, and Google’s API to accomplish this. The script authenticated the administrative user, accessed Conn’s LDAP server, copied the username/password of all student accounts, and finally added all users to Gmail’s global address book for student use. This script was successfully utilized in the conversion process and resulted in complete data transfer between the two databases.
