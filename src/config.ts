@@ -12,6 +12,7 @@ export interface SiteConfig {
     youtube?: string;
     linkedin?: string;
     email?: string;
+    mastodon?: string;
   };
   siteUrl: string;
 }
@@ -28,7 +29,8 @@ export const config: SiteConfig = {
     github: "https://github.com/alexmarc-us/",
     linkedin: "https://www.linkedin.com/in/amarcus/",
     email: "mr@alexmarc.us",
-    youtube: "https://www.youtube.com/@optimarcusprime"
+    youtube: "https://www.youtube.com/@optimarcusprime",
+    mastodon: "https://sunny.garden/@optimarcusprime",
   },
   siteUrl: "https://alexmarc.us/"
 };
