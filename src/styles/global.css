@@ -3,23 +3,27 @@
 /* Color Variables */
 :root {
   --color-root: #352859;
+  --color-alternate: #e8f9f3;;
 
-   /* Semantic Colors */
-  --color-background: #1E2019;
-  --color-surface: var(--color-root);
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #DBC888;
-  --color-text-inverse: #1E2019;
-  --color-text-muted: #ececec;
-  --color-border: #587B7F;
-  --color-accent: #E2C044;
-  
+  /* Semantic Colors */
+  --color-background: var(--color-alternate);
+  --color-surface: #ffffff;
+  --color-text-primary: #1b1b23;
+  --color-text-secondary: #5c4e8a;
+  --color-text-inverse: #ffffff;
+  --color-text-muted: #6c6b7b;
+  --color-border: #d8d5ef;
+  --color-accent: var(--color-root);
+  --color-primary: var(--color-root);
+  --color-code-bg: #f5f3ff;
+  --color-code-text: #1b1b23;
+
   /* Typography */
   --font-heading-primary: 'Bungee Shade', system-ui;
   --font-heading-secondary: 'Bungee', system-ui;
   --font-body: 'Work Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  
+
   /* Layout */
   --grid-unit: 8px;
   --max-width: 1200px;
@@ -68,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-text-primary);
+  color: var(--color-accent);
   margin-bottom: calc(var(--grid-unit) * 2);
 }
 
@@ -105,13 +109,13 @@ p {
 /* Links */
 a {
   color: var(--color-accent);
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.2s ease;
 }
 
 a:hover,
 a:focus {
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
   text-decoration: underline;
 }
 

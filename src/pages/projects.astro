@@ -28,28 +28,30 @@ const sortedPosts = allPosts.sort(
   showSidebar={false}
 >
   <div class="project-page">
-    <header class="project-header">
-      <h2 class="project-title">Projects</h2>
-      <p class="project-description">A collection of my favorite projects.</p>
-      <hr />
-    </header>
-
-    {
-      sortedPosts.length > 0 ? (
-        <div class="posts-list">
-          {sortedPosts.map((post: any) => (
-            <a
-              href={`${base}projects/${post.file
-                .split("/")
-                .pop()
-                ?.replace(/\.(md|mdx)$/, "")}`}
-              class="post-item"
-              style="display: block; text-decoration: none;"
-            >
-              <article style="pointer-events: none;">
-                <h3 class="post-title" style="pointer-events: auto;">
-                  {post.frontmatter.title}
-                </h3>
+    <div class="content-section">
+      <header class="project-header">
+        <h2 class="project-title">Projects</h2>
+        <p class="project-description">A collection of my favorite projects.</p>
+        <p class="project-description">Click any project to see screenshots and details!</p>
+        <hr />
+      </header>
+    
+      {
+        sortedPosts.length > 0 ? (
+          <div class="posts-list">
+            {sortedPosts.map((post: any) => (
+              <a
+                href={`${base}projects/${post.file
+                  .split("/")
+                  .pop()
+                  ?.replace(/\.(md|mdx)$/, "")}`}
+                class="post-item"
+                style="display: block; text-decoration: none;"
+              >
+                <article style="pointer-events: none;">
+                  <h3 class="post-title" style="pointer-events: auto;">
+                    {post.frontmatter.title}
+                  </h3>
 
                 <div class="post-meta">
                   <time class="post-date" datetime={post.frontmatter.date}>
@@ -62,17 +64,18 @@ const sortedPosts = allPosts.sort(
                     )}
                   </time>
 
-                  {post.frontmatter.tags && (
+                  
+                </div>
+                {post.frontmatter.description && (
+                  <p>{post.frontmatter.description}</p>
+                )}
+                {post.frontmatter.tags && (
                     <div class="post-tags">
                       {post.frontmatter.tags.map((tag: string) => (
                         <span class="tag">{tag}</span>
                       ))}
                     </div>
                   )}
-                </div>
-                {post.frontmatter.description && (
-                  <p>{post.frontmatter.description}</p>
-                )}
               </article>
             </a>
           ))}
@@ -86,6 +89,7 @@ const sortedPosts = allPosts.sort(
         </div>
       )
     }
+    </div>
   </div>
 </Layout>
 
@@ -93,6 +97,18 @@ const sortedPosts = allPosts.sort(
   .project-page {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .content-section {
+    line-height: 1.7;
+    border: 2px solid var(--color-border);
+    padding: calc(var(--grid-unit) * 4);
+    border-radius: calc(var(--grid-unit));
+    background-color: var(--color-surface);
+  }
+
+  .content-section h2 {
+    color: var(--color-accent);
   }
 
   .project-header {
@@ -123,11 +139,15 @@ const sortedPosts = allPosts.sort(
     transition: color 0.2s ease;
   }
 
+  .post-item h3 {
+    margin-bottom: 0px;
+  }
+
   a.post-item:hover,
   a.post-item:focus,
   a.post-item:hover h3,
   a.post-item:focus h3 {
-    color: var(--color-accent);
+    color: var(--color-text-secondary);
   }
 
   .post-meta {
@@ -153,8 +173,8 @@ const sortedPosts = allPosts.sort(
 
   .tag {
     background-color: transparent;
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-text-muted);
     padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
     font-size: 0.75rem;
     font-weight: 600;

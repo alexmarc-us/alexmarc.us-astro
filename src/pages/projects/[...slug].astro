@@ -45,44 +45,48 @@ const publishedTime = frontmatter.date
   publishedTime={publishedTime}
 >
   <article class="project-post">
-    <header class="post-header">
-      <h2>{frontmatter.title}</h2>
-
-      <div class="post-meta">
-        <time class="post-date" datetime={frontmatter.date}>
-          {
-            new Date(frontmatter.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-            })
-          }
-        </time>
-
-        {
-          frontmatter.tags && frontmatter.tags.length > 0 && (
-            <div class="post-tags">
-              <div class="tag-list">
-                {frontmatter.tags.map((tag: string) => (
-                  <span class="tag">{tag}</span>
-                ))}
-              </div>
-            </div>
-          )
-        }
-      </div>
-    </header>
-
-    <div class="post-content">
-      <Content />
+    <div class="post-navigation">
+      <a href={`${base}projects`} class="back-to-project"
+        >← Back to Projects</a
+      >
     </div>
+    <div class="content-section">
+      <header class="post-header">
+        <h2>{frontmatter.title}</h2>
 
-    <footer class="post-footer">
-      <div class="post-navigation">
-        <a href={`${base}projects`} class="back-to-project"
-          >← Back to Projects</a
-        >
+        <div class="post-meta">
+          <time class="post-date" datetime={frontmatter.date}>
+            {
+              new Date(frontmatter.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+              })
+            }
+          </time>
+
+          {
+            frontmatter.tags && frontmatter.tags.length > 0 && (
+              <div class="post-tags">
+                <div class="tag-list">
+                  {frontmatter.tags.map((tag: string) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            )
+          }
+        </div>
+      </header>
+
+      <div class="post-content">
+        <Content />
       </div>
-    </footer>
+    </div>
+    <div class="post-navigation">
+      <a href={`${base}projects`} class="back-to-project"
+        >← Back to Projects</a
+      >
+    </div>
   </article>
 </Layout>
 
@@ -92,8 +96,24 @@ const publishedTime = frontmatter.date
     margin: 0 auto;
   }
 
+  .content-section {
+    line-height: 1.7;
+    border: 2px solid var(--color-border);
+    padding: calc(var(--grid-unit) * 4);
+    border-radius: calc(var(--grid-unit));
+    background-color: var(--color-surface);
+  }
+
+  .content-section h2 {
+    color: var(--color-accent);
+  }
+
   .post-header {
-    margin-bottom: calc(var(--grid-unit) * 6);
+    margin-bottom: calc(var(--grid-unit) * 4);
+  }
+
+  .post-header h2 {
+    margin-bottom: 0;
   }
 
   .post-meta {
@@ -165,8 +185,8 @@ const publishedTime = frontmatter.date
   }
 
   .post-content :global(pre) {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--color-code-bg);
+    color: var(--color-code-text);
     padding: calc(var(--grid-unit) * 3);
     margin: calc(var(--grid-unit) * 4) 0;
     border-radius: 8px;
@@ -184,14 +204,12 @@ const publishedTime = frontmatter.date
     font-size: inherit;
   }
 
-  /* Custom Prism syntax highlighting for German flag colors */
-  /* CSS selectors like h1 - use gold */
+  /* Syntax highlighting tuned for the light/purple theme */
   .post-content :global(.token.selector),
   .post-content :global(.token.tag) {
-    color: #ffd700 !important;
+    color: var(--color-root) !important;
   }
 
-  /* CSS properties and functions - use red */
   .post-content :global(.token.property),
   .post-content :global(.token.class-name),
   .post-content :global(.token.function) {
@@ -201,34 +219,34 @@ const publishedTime = frontmatter.date
   .post-content :global(.token.punctuation),
   .post-content :global(.token.brace),
   .post-content :global(.token.bracket) {
-    color: #cccccc !important;
+    color: var(--color-text-muted) !important;
   }
 
   .post-content :global(.token.string),
   .post-content :global(.token.attr-value),
   .post-content :global(.token.url) {
-    color: #ffcc00 !important;
+    color: var(--color-text-secondary) !important;
   }
 
   .post-content :global(.token.comment) {
-    color: #888888 !important;
+    color: var(--color-text-muted) !important;
     font-style: italic;
   }
 
   .post-content :global(.token.number),
   .post-content :global(.token.boolean) {
-    color: #66d9ef !important;
+    color: var(--color-accent) !important;
   }
 
   /* Reset default Prism styles and apply our theme */
   .post-content :global(pre[class*="language-"]) {
-    background: #000000 !important;
-    color: #ffffff !important;
+    background: var(--color-code-bg) !important;
+    color: var(--color-code-text) !important;
   }
 
   .post-content :global(code[class*="language-"]) {
-    background: #000000 !important;
-    color: #ffffff !important;
+    background: var(--color-code-bg) !important;
+    color: var(--color-code-text) !important;
   }
 
   .post-content :global(code) {
@@ -290,8 +308,8 @@ const publishedTime = frontmatter.date
 
   .tag {
     background-color: transparent;
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-text-muted);
     padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
     font-size: 0.75rem;
     font-weight: 600;
@@ -306,24 +324,21 @@ const publishedTime = frontmatter.date
     gap: calc(var(--grid-unit));
   }
 
+  .post-navigation {
+    margin: calc(var(--grid-unit) * 2) 0;
+  }
+
   .back-to-project {
-    font-family: var(--font-heading-secondary);
-    font-weight: 700;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--color-accent);
-    padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 2);
-    border: 2px solid var(--color-accent);
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    display: inline-block;
   }
 
   .back-to-project:hover,
   .back-to-project:focus {
-    background-color: var(--color-accent);
-    color: white;
-    text-decoration: none;
+    color: var(--color-text-muted);
   }
 
   @media (max-width: 768px) {
