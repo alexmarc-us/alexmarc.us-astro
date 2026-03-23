@@ -37,12 +37,9 @@ const { author, social } = config;
       <h2 class="author-name">{author.name}</h2>
       <p class="author-bio">{author.bio}</p>
       <div class="shortcuts">
-        <span title="Jump to section" style="font-size:1.5rem;"></span>
-        <span class="arrow" aria-label="Jump to section" role="img">→</span>
         <button class="shortcut-btn">Summary</button>
         <button class="shortcut-btn">Skills</button>
         <button class="shortcut-btn">Experience</button>
-        <span class="arrow" aria-label="Jump to section" role="img">←</span>
       </div>
     </div>
 
@@ -659,6 +656,7 @@ const { author, social } = config;
     }
 
     .shortcuts {
+      flex-direction: column;
       gap: calc(var(--grid-unit) * 2);
     }
 
