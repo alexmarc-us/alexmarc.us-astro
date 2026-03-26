@@ -107,6 +107,10 @@ p {
   text-indent: calc(var(--grid-unit) * 2);
 }
 
+p:has(> img) {
+  text-indent: 0;
+}
+
 /* Links */
 a {
   color: var(--color-accent);
