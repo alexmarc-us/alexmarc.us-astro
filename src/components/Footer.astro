@@ -8,7 +8,12 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <img src={base + "am.png"} alt={config.title} class="am-logo" />
+  <button
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="Scroll to top"
+  >
+    <img src={base + "am.png"} alt={config.title} class="am-logo" />
+  </button>
 </footer>
 
 <style>
@@ -20,11 +25,18 @@ const currentYear = new Date().getFullYear();
     justify-content: center;
   }
 
+  .site-footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
   img.am-logo {
     height: 60px;
     width: 60px;
     background-color: transparent;
     border: none;
+    margin: calc(var(--grid-unit) * 2);
   }
 
   @media (max-width: 768px) {

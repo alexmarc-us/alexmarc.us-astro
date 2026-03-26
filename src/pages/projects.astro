@@ -32,8 +32,6 @@ const sortedPosts = allPosts.sort(
       <header class="project-header">
         <h2 class="project-title">Projects</h2>
         <p class="project-description">A collection of my favorite projects.</p>
-        <p class="project-description">Click any project to see screenshots and details!</p>
-        <hr />
       </header>
     
       {
@@ -50,7 +48,7 @@ const sortedPosts = allPosts.sort(
               >
                 <article style="pointer-events: none;">
                   <h3 class="post-title" style="pointer-events: auto;">
-                    {post.frontmatter.title}
+                    ▷ {post.frontmatter.title}
                   </h3>
 
                 <div class="post-meta">
@@ -67,15 +65,8 @@ const sortedPosts = allPosts.sort(
                   
                 </div>
                 {post.frontmatter.description && (
-                  <p>{post.frontmatter.description}</p>
+                  <p class="post-description">{post.frontmatter.description}</p>
                 )}
-                {post.frontmatter.tags && (
-                    <div class="post-tags">
-                      {post.frontmatter.tags.map((tag: string) => (
-                        <span class="tag">{tag}</span>
-                      ))}
-                    </div>
-                  )}
               </article>
             </a>
           ))}
@@ -163,6 +154,10 @@ const sortedPosts = allPosts.sort(
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+
+  .post-description {
+    text-indent: calc(var(--grid-unit) * 3);
   }
 
   .post-tags {

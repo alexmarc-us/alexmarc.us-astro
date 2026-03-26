@@ -3,7 +3,7 @@
 /* Color Variables */
 :root {
   --color-root: #352859;
-  --color-alternate: #e8f9f3;;
+  --color-alternate: #676FEB;;
 
   /* Semantic Colors */
   --color-background: var(--color-alternate);
@@ -12,7 +12,7 @@
   --color-text-secondary: #5c4e8a;
   --color-text-inverse: #ffffff;
   --color-text-muted: #6c6b7b;
-  --color-border: #d8d5ef;
+  --color-border: var(--color-root);
   --color-accent: var(--color-root);
   --color-primary: var(--color-root);
   --color-code-bg: #f5f3ff;
@@ -88,7 +88,7 @@ h1 {
 h2 {
   font-family: var(--font-heading-secondary);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.1em;
 }
@@ -96,7 +96,7 @@ h2 {
 h3 {
   font-family: var(--font-heading-secondary);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
 }
@@ -184,7 +184,7 @@ figcaption {
 hr {
   border: none;
   height: 4px;
-  background-color: var(--color-accent);
+  background-color: var(--color-alternate);
   width: 50%;
   margin: calc(var(--grid-unit) * 4) auto;
 }
