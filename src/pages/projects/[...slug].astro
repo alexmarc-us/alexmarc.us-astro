@@ -48,7 +48,7 @@ const publishedTime = frontmatter.date
     <div class="content-section">
       <div class="post-navigation">
         <a href={`${base}projects`} class="back-to-project"
-          >← Back to Projects</a
+          >Back to Projects</a
         >
       </div>
       <header class="post-header">
@@ -83,7 +83,7 @@ const publishedTime = frontmatter.date
       </div>
       <div class="post-navigation">
         <a href={`${base}projects`} class="back-to-project"
-          >← Back to Projects</a
+          >Back to Projects</a
         >
       </div>
     </div>
@@ -337,6 +337,12 @@ const publishedTime = frontmatter.date
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+
+  .back-to-project::before{
+    content: "◀";
+    display: inline-block;
+    margin-right: calc(var(--grid-unit) * 1);
   }
 
   .back-to-project:hover,
