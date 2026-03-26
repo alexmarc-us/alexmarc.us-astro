@@ -31,7 +31,7 @@ const sortedPosts = allPosts.sort(
     <div class="content-section">
       <header class="project-header">
         <h2 class="project-title">Projects</h2>
-        <p class="project-description">A collection of my favorite projects.</p>
+        <p class="project-description">A collection of my favorite projects. Click on a project to learn more!</p>
       </header>
     
       {
@@ -48,7 +48,7 @@ const sortedPosts = allPosts.sort(
               >
                 <article style="pointer-events: none;">
                   <h3 class="post-title" style="pointer-events: auto;">
-                    ▷ {post.frontmatter.title}
+                    {post.frontmatter.title}
                   </h3>
 
                 <div class="post-meta">
@@ -103,7 +103,7 @@ const sortedPosts = allPosts.sort(
   }
 
   .project-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: calc(var(--grid-unit) * 8);
   }
 
@@ -148,6 +148,12 @@ const sortedPosts = allPosts.sort(
     margin-bottom: calc(var(--grid-unit) * 2);
   }
 
+  .post-title::after {
+    content: "▷";
+    display: inline-block;
+    font-size: 0.8em;
+  }
+
   .post-date {
     font-family: var(--font-mono);
     font-size: 0.9rem;
@@ -179,7 +185,7 @@ const sortedPosts = allPosts.sort(
   }
 
   .no-posts {
-    text-align: center;
+    text-align: left;
     padding: calc(var(--grid-unit) * 6);
     color: var(--color-text-muted);
     font-style: italic;
@@ -203,6 +209,7 @@ const sortedPosts = allPosts.sort(
 
     .post-title {
       font-size: 1.75rem;
+      hyphens: auto;
       overflow-wrap: break-word;
       word-break: break-word;
     }
