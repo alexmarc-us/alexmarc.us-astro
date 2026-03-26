@@ -115,13 +115,12 @@ p:has(> img) {
 a {
   color: var(--color-accent);
   text-decoration: underline;
-  transition: color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 a:hover,
 a:focus {
   color: var(--color-text-secondary);
-  text-decoration: underline;
   transform: translateY(-2px);
   text-decoration: none;
 }
