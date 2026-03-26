@@ -104,6 +104,7 @@ h3 {
 p {
   margin-bottom: calc(var(--grid-unit) * 2);
   font-size: 1.125rem;
+  text-indent: calc(var(--grid-unit) * 2);
 }
 
 /* Links */
@@ -117,6 +118,8 @@ a:hover,
 a:focus {
   color: var(--color-text-secondary);
   text-decoration: underline;
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 /* Lists */
