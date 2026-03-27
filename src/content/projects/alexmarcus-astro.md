@@ -1,5 +1,5 @@
 ---
-title: "AlexMarc.us Astro Site"
+title: "AlexMarc.us"
 date: "08-09-2025"
 description: "Developed a personal portfolio using the Astro framework, focusing on speed, maintainability, and custom features."
 categories: ["code"]
