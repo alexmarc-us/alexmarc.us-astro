@@ -33,17 +33,16 @@ const sortedPosts = allPosts
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">Hi there, I'm Alex.</h1>
+        <h2 class="hero-title">Hi there, I'm Alex!</h2>
         <p class="hero-description">
-          I build code and teams
-          that deliver innovative, enjoyable experiences.
+          I build code and teams that deliver innovative, enjoyable experiences.
         </p>
         <p class="hero-description">
           This site contains my <a href="/profile">profile</a> and favorite <a
             href="/projects">projects</a
           >.
         </p>
-        <h2 class="hero-subtitle">Let's connect!</h2>
+        <h3 class="hero-subtitle">Let's connect</h3>
         <ul class="social-links">
           {
             config.social.email && (
@@ -175,28 +174,26 @@ const sortedPosts = allPosts
 
 <style>
   .landing-page {
-    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .hero {
     text-align: left;
-    padding: calc(var(--grid-unit) * 8);
-    background: var(--color-surface);
-    border: var(--color-border) solid 2px;
-    border-radius: 4px;
+    border: 2px solid var(--color-border);
+    padding: calc(var(--grid-unit) * 4);
+    border-radius: calc(var(--grid-unit));
+    background-color: var(--color-surface);
+    margin-bottom: calc(var(--grid-unit) * 4);
   }
 
   .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 var(--content-padding);
   }
 
   .hero-title {
     font-family: var(--font-heading-secondary);
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
     margin-bottom: calc(var(--grid-unit) * 3);
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -204,19 +201,8 @@ const sortedPosts = allPosts
     margin-bottom: calc(var(--grid-unit) * 2);
   }
 
-  .hero-description {
-    font-size: 1.375rem;
-    line-height: 1.6;
-    color: var(--color-text-primary);
-    margin-bottom: calc(var(--grid-unit) * 4);
-  }
-
   .hero-image {
     margin-top: calc(var(--grid-unit) * 4);
-  }
-
-  h2 {
-    font-size: 1.5rem;
   }
 
   .social-links {
@@ -257,17 +243,6 @@ const sortedPosts = allPosts
       max-width: none;
       margin: 0 auto;
       padding: 0 0;
-    }
-    .hero-title {
-      font-size: 2rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-    }
-
-    .hero-description {
-      font-size: 1.125rem;
     }
   }
 </style>
