@@ -34,7 +34,7 @@ The page was built with a fully responsive layout, adapting cleanly across deskt
 
 ### Modal image viewer
 
-Speaker and team headshots are displayed in a modal image viewer, allowing visitors to view larger versions of each photo without leaving the page. The interaction keeps the browsing experience smooth and contextual—particularly useful given the number of speakers and team members featured on the page.
+Speaker and team member details are displayed in a modal image viewer, allowing visitors to view more information without leaving the page. The interaction keeps the browsing experience smooth and contextual—particularly useful given the number of speakers and team members featured on the page.
 
 ![Story Island speaker modal screenshot](./assets/story-island-modal.png)
 
