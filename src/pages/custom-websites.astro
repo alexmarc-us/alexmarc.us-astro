@@ -1,0 +1,407 @@
+---
+import Layout from "../components/Layout.astro";
+import { config } from "../config";
+
+const { social } = config;
+---
+
+<script>
+  const buttons = document.querySelectorAll("button.shortcut-btn");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      scrollToSection((button.textContent as string).trim());
+    });
+  });
+
+  function scrollToSection(sectionId: string) {
+    const header = document.querySelector("header.site-header");
+    const headerHeight = header ? (header as HTMLElement).offsetHeight : 0;
+    const el = document.getElementById(sectionId);
+    if (el) {
+      const y =
+        el.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }
+</script>
+
+<Layout
+  title="Custom Websites"
+  showSidebar={false}
+  description="Alex Marcus offers custom website development for local artists and small businesses."
+>
+  <div class="wwm-page">
+
+    <div class="intro-section">
+      <div class="intro-info">
+        <h2>Custom Websites</h2>
+        <p class="intro-bio">
+          If your website feels outdated, hard to update, or simply doesn't exist yet:
+          let's talk. I love working with local artisans and small
+          businesses to create customized web experiences. I keep things collaborative, low-pressure, and focused on what actually matters
+          to you and your audience.
+        </p>
+      </div>
+      <div class="shortcuts">
+        <button class="shortcut-btn">Approach</button>
+        <button class="shortcut-btn">Pricing</button>
+        <button class="shortcut-btn">Examples</button>
+        <button class="shortcut-btn">Contact</button>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div id="Approach">
+        <h3>My Approach</h3>
+        <p>
+          My process is collaborative, well-organized, and iterative. To kick things off, we'd meet
+          to talk through your goals and working style. From there, I put together a shared
+          project tracker so you always know where things stand.
+        </p>
+        <p>
+          Before any code gets written, I ask your team a few questions that shape everything that
+          follows:
+        </p>
+        <ul>
+          <li>What's working well on your current site (if you have one)?</li>
+          <li>What are the must-haves on the new site?</li>
+          <li>Are there other websites you love the look and feel of?</li>
+        </ul>
+        <p>
+          From there, I "design in code" by building and publishing updates to a private site
+          regularly, so you can see real progress rather than mockups. I ask for feedback often,
+          especially at milestones. You'll see the messy middle, and I think that's a good thing.
+          It keeps the final result aligned with what you actually wanted.
+        </p>
+        <p>
+          We wrap up once all tasks are complete, your team has done user testing, and any remaining
+          issues are resolved. Then we flip the switch and your new site goes live.
+        </p>
+
+        <h3>What's Included</h3>
+        <p>
+          Every project runs through these phases. Depending on the scope of your site, some phases
+          are lighter than others, but nothing gets skipped.
+        </p>
+
+        <h4>
+          Introduction
+          <span class="subhead">We meet, align on goals, and get organized</span>
+        </h4>
+        <ul>
+          <li>Meet your team, discuss goals and priorities</li>
+          <li>Agree on a meeting cadence and communication style</li>
+          <li>Set up a shared project tracker and asset storage space</li>
+        </ul>
+
+        <h4>
+          Ideation
+          <span class="subhead">Research and design direction</span>
+        </h4>
+        <ul>
+          <li>Gather input from your team on style preferences and inspirations</li>
+          <li>Research comparable sites for visual and functional reference</li>
+          <li>Document design guidance to keep us aligned throughout the project</li>
+        </ul>
+
+        <h4>
+          Setup
+          <span class="subhead">Platform and content preparation</span>
+        </h4>
+        <ul>
+          <li>Register and configure your site platform (e.g. Squarespace, WordPress, static code)</li>
+          <li>Download and store existing site assets if migrating from another platform</li>
+          <li>Identify content to carry over and content to retire</li>
+          <li>Build a site skeleton with planned pages and structure</li>
+          <li>Define requirements for interactive elements like galleries, forms, or member areas</li>
+        </ul>
+
+        <h4>
+          Development
+          <span class="subhead">Building the real thing</span>
+        </h4>
+        <ul>
+          <li>Implement all planned pages and migrate existing content and photos</li>
+          <li>Apply your visual identity: colors, fonts, favicon, and overall style</li>
+          <li>Build responsive layouts that look great on phones, tablets, and desktops</li>
+          <li>Implement interactive elements (galleries, forms, etc.)</li>
+          <li>Follow accessibility best practices throughout</li>
+          <li>Apply SEO best practices so your site is easy to find</li>
+        </ul>
+
+        <h4>
+          Testing
+          <span class="subhead">Making sure everything works</span>
+        </h4>
+        <ul>
+          <li>User acceptance testing with your team</li>
+          <li>Validate responsive design across device sizes</li>
+          <li>Validate accessibility and SEO</li>
+          <li>Check loading performance, especially for image-heavy pages</li>
+          <li>Resolve any issues raised during testing</li>
+        </ul>
+
+        <h4>
+          Deployment
+          <span class="subhead">Going live</span>
+        </h4>
+        <ul>
+          <li>Transfer or purchase your domain and update DNS to point to the new platform</li>
+          <li>Final validation of the live site</li>
+        </ul>
+
+        <h4>
+          Post-Launch
+          <span class="subhead">Handing off the keys</span>
+        </h4>
+        <ul>
+          <li>Training your team on how to manage and update the site</li>
+          <li>Documentation for ongoing maintenance</li>
+          <li>Resolution of any immediate post-launch issues</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div id="Pricing">
+        <h3>Pricing</h3>
+        <p>
+          I price projects at a fixed rate based on scope, so you always know what you're getting
+          into before any work begins. I'm specifically aiming to make custom websites
+          accessible for local artists and organizations, and that goal is reflected in my rates.
+        </p>
+        <p>
+          Beyond my development fee, you'll also have ongoing hosting costs, which are typically
+          low. For example, platforms like Squarespace offer tiers starting around $16/month that
+          cover most small sites, including support for your custom domain. Domain purchase and 
+          renewal runs around $20/year and renews automatically.
+        </p>
+        <p>
+          Post-launch support beyond the initial scope is available at a
+          separate hourly rate. I'll always be upfront about what that looks like before you
+          commit to anything.
+        </p>
+        <p>
+          The best way to get a quote is to just reach out. We can talk through what you need and
+          I'll put together a fair number for the scope of your project.
+        </p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div id="Examples">
+        <h3>Examples</h3>
+        <p>Here are a few projects that reflect the kind of work I have done for local organizations.</p>
+        <div class="examples-list">
+          <div class="example-item">
+            <h4>
+              Story Island
+              <span class="subhead">Genre fiction writing conference, Bainbridge Island, WA</span>
+            </h4>
+            <p>
+              A landing page built for a genre fiction writing conference hosted by BARN, a Bainbridge
+              Island non-profit. Designed to capture registrations, showcase speakers, and answer
+              frequently asked questions, all within the organization's existing web presence.
+            </p>
+            <a href="/projects/story-island">See the project →</a>
+          </div>
+          <hr />
+          <div class="example-item">
+            <h4>
+              Arlo Maddox
+              <span class="subhead">Local artist portfolio</span>
+            </h4>
+            <p>
+              A portfolio site for a local visual artist, built to showcase their work in a clean,
+              gallery-forward layout.
+            </p>
+            <a href="/projects/arlo-maddox">See the project →</a>
+          </div>
+          <hr />
+          <div class="example-item">
+            <h4>
+              Manette Neighborhood Coalition
+              <span class="subhead">Community organization, Bremerton, WA</span>
+            </h4>
+            <p>
+              Volunteered as Technology Officer to build and maintain a community website on WordPress,
+              including a community events calendar, news posts, and a brand identity and logo created
+              from scratch.
+            </p>
+            <a href="/projects/mnc">See the project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section cta-section">
+      <div id="Contact">
+        <h3>Let's Talk</h3>
+        <p>
+          If any of this sounds like what you've been looking for, I'd love to hear from you. No
+          pressure, no commitment. Just a conversation about your site and what you're hoping to
+          accomplish. I'm happy to answer questions, talk through scope, or just get a sense of
+          whether we'd be a good fit.
+        </p>
+        <p>
+          Send me an email and we'll take it from there.
+        </p>
+        <a href={`mailto:${social.email}`} class="cta-link">{social.email}</a>
+      </div>
+    </div>
+
+  </div>
+</Layout>
+
+<style>
+  .wwm-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .intro-section {
+    text-align: left;
+    margin-bottom: calc(var(--grid-unit) * 4);
+    padding: calc(var(--grid-unit) * 4);
+    background-color: var(--color-surface);
+    border-radius: calc(var(--grid-unit));
+    border: 2px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 4);
+  }
+
+  .intro-bio {
+    font-size: 1.25rem;
+  }
+
+  .shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--grid-unit) * 3);
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: var(--font-heading-secondary);
+  }
+
+  .shortcuts .shortcut-btn {
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-family: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+    padding: 0;
+    margin-right: calc(var(--grid-unit) * 2);
+  }
+
+  .shortcuts .shortcut-btn::after {
+    content: "▼";
+    display: inline-block;
+    margin-left: calc(var(--grid-unit) * 1);
+    font-size: 0.8em;
+  }
+
+  .shortcuts .shortcut-btn:hover {
+    color: var(--color-text-secondary);
+    transform: translateY(-2px);
+  }
+
+  .content-section {
+    line-height: 1.7;
+    border: 2px solid var(--color-border);
+    padding: calc(var(--grid-unit) * 4);
+    border-radius: calc(var(--grid-unit));
+    background-color: var(--color-surface);
+    margin-bottom: calc(var(--grid-unit) * 4);
+  }
+
+  .content-section span.subhead {
+    display: block;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+    margin-top: calc(var(--grid-unit) * 0.5);
+    text-transform: none;
+  }
+
+  .content-section p {
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .content-section ul {
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .content-section li {
+    margin-bottom: calc(var(--grid-unit));
+    font-size: 1.125rem;
+    list-style-type: square;
+  }
+
+  .examples-list {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 2);
+  }
+
+  .example-item {
+    padding: calc(var(--grid-unit) * 2) 0;
+  }
+
+  .example-item p {
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .cta-section {
+    text-align: left;
+  }
+
+  .cta-link {
+    display: inline-block;
+    font-family: var(--font-heading-secondary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: calc(var(--grid-unit) * 3);
+    }
+
+    .intro-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .intro-bio {
+      font-size: 1.125rem;
+    }
+
+    .shortcuts {
+      flex-direction: column;
+      gap: calc(var(--grid-unit) * 2);
+    }
+
+    .shortcuts .shortcut-btn {
+      font-size: 1.25rem;
+    }
+
+    .content-section {
+      padding: calc(var(--grid-unit) * 3);
+    }
+
+    .content-section p,
+    .content-section li {
+      font-size: 1rem;
+    }
+
+    .cta-link {
+      font-size: 1.25rem;
+    }
+  }
+</style>

@@ -57,11 +57,12 @@ const { base = "" } = Astro.site
       >
         <ul class="nav-list">
           {
-            ["Home", "Profile", "Projects"].map((label, i) => {
+            ["Home", "Profile", "Projects", "Custom Websites"].map((label, i) => {
               const paths = [
                 base,
                 base + "profile",
                 base + "projects",
+                base + "custom-websites",
               ];
               const isActive =
                 label === "Home"
@@ -91,11 +92,12 @@ const { base = "" } = Astro.site
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <ul class="mobile-nav-list">
     {
-      ["Home", "Profile", "Projects"].map((label, i) => {
+      ["Home", "Profile", "Projects", "Custom Websites"].map((label, i) => {
         const paths = [
           base,
           base + "profile",
           base + "projects",
+          base + "custom-websites",
         ];
         const isActive =
           label === "Home"
