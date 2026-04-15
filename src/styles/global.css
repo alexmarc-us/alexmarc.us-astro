@@ -6,13 +6,13 @@
   --color-alternate: #676FEB;;
 
   /* Semantic Colors */
-  --color-background: var(--color-alternate);
+  --color-background: var(--color-root);
   --color-surface: #ffffff;
   --color-text-primary: #1b1b23;
   --color-text-secondary: #5c4e8a;
   --color-text-inverse: #ffffff;
   --color-text-muted: #6c6b7b;
-  --color-border: var(--color-root);
+  --color-border: var(--color-alternate);
   --color-accent: var(--color-root);
   --color-primary: var(--color-root);
   --color-code-bg: #f5f3ff;
@@ -120,7 +120,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--color-text-secondary);
+  color: var(--color-alternate);
   transform: translateY(-2px);
   text-decoration: none;
 }
