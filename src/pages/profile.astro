@@ -49,72 +49,41 @@ const { author, social } = config;
       <div id="Summary">
         <h3>Summary</h3>
         <p>
-          Engineering leader with 18 years of experience delivering
-          enterprise-scale web and mobile applications, leading cross-functional
-          teams, and driving technical strategy. Skilled in UI/UX design,
-          accessibility, and maintainable code, translating concepts into
-          functional interfaces without dedicated design resources.
+          I specialize in leading ambiguous, cross-functional initiatives from architecture through production, building React/TypeScript platforms that scale from early pilots to enterprise adoption.
         </p>
         <p>
-          Experienced in structuring complex projects, managing multi-project
-          portfolios, backlogs, and leading sprint cycles for predictable
-          delivery. Proven track record managing vendor relationships and
-          stakeholder alignment in high-stakes environments. Strong in
-          cross-functional collaboration, product ownership, team mentorship,
-          and technical documentation.
+          At Starbucks, I've led delivery of workforce systems used by tens of thousands of partners, improving data quality, enforcing policy compliance, and enabling scheduling capabilities tied to significant business impact.
         </p>
         <p>
-          Recognized AI Champion driving adoption of AI-enabled development
-          practices. Effective communicator, comfortable leading discussions,
-          interfacing with stakeholders, and presenting technical solutions to
-          diverse audiences.
+          My focus extends beyond feature development to building engineering systems that make teams effective—CI/CD, observability, accessibility, and scalable front-end architecture.
+        </p>
+        <p>
+          I also invest in people and organizational impact through mentoring, stakeholder alignment, and AI-enabled workflows as a Copilot Champion.
         </p>
       </div>
     </div>
     <div class="content-section">
       <div id="Skills">
         <h3>Skills</h3>
-        <h4>Front-End & Mobile Development</h4>
+        <h4>Core Engineering & Delivery</h4>
         <ul class="skills-list">
-          <li>ReactJS</li>
-          <li>React Native</li>
-          <li>TypeScript</li>
-          <li>JavaScript (ES6)</li>
-          <li>CSS3</li>
-          <li>HTML5</li>
-          <li>C#</li>
-          <li>iOS integration</li>
-          <li>Android integration</li>
-          <li>Responsive design</li>
-          <li>WebGL (ThreeJS)</li>
-          <li>AJAX</li>
-          <li>jQuery</li>
-          <li>REST API integration</li>
-          <li>GraphQL</li>
-          <li>Web Components</li>
-          <li>Unity 3D</li>
+          <li>React / TypeScript</li>
+          <li>Web platform architecture</li>
+          <li>API integrations</li>
+          <li>CI/CD, automated testing</li>
         </ul>
-        <h4>UI/UX & Accessibility</h4>
+        <h4>Cloud & Observability</h4>
         <ul class="skills-list">
-          <li>Accessibility-first design (WCAG)</li>
-          <li>AXE DevTools auditing</li>
-          <li>Visual regression testing (Cypress)</li>
-          <li>Stakeholder-driven UX iterations</li>
-          <li>Digital design principles</li>
-          <li>Design systems</li>
-          <li>Responsive interfaces</li>
-          <li>Live product demonstrations</li>
+          <li>Microsoft Azure</li>
+          <li>Monitoring & telemetry</li>
+          <li>Production reliability & on-call</li>
         </ul>
-        <h4>Team Leadership</h4>
+        <h4>Product & Leadership</h4>
         <ul class="skills-list">
-          <li>Agile and Scrum practices</li>
-          <li>Sprint planning</li>
-          <li>Backlog management</li>
-          <li>Resource planning</li>
-          <li>Mentorship</li>
-          <li>Technical team management</li>
-          <li>Cross-team coordination</li>
-          <li>Vendor management</li>
+          <li>Technical leadership & architecture</li>
+          <li>Product ownership & stakeholder alignment</li>
+          <li>Backlog, sprint, and delivery management</li>
+          <li>Mentorship and team development</li>
         </ul>
         <h4>Cross-Functional Collaboration</h4>
         <ul class="skills-list">
@@ -125,25 +94,17 @@ const { author, social } = config;
           <li>Technical documentation</li>
           <li>Collaboration with Product, Engineering, and Operations</li>
         </ul>
-        <h4>Cloud & DevOps</h4>
+        <h4>Quality & Accessibility</h4>
         <ul class="skills-list">
-          <li>Azure</li>
-          <li>AWS</li>
-          <li>GitHub Actions</li>
-          <li>Continuous integration (CI/CD)</li>
-          <li>Azure Application Insights</li>
-          <li>PagerDuty</li>
-          <li>Automated unit testing</li>
-          <li>Microservices</li>
-          <li>Event-driven architectures</li>
+          <li>WCAG accessibility</li>
+          <li>Automated testing</li>
+          <li>Internationalization (i18n)</li>
         </ul>
-        <h4>Other Technical Skills</h4>
+        <h4>AI & Developer Productivity</h4>
         <ul class="skills-list">
-          <li>AI prompt engineering</li>
-          <li>Copilot AI customization</li>
-          <li>PHP</li>
-          <li>MySQL</li>
-          <li>Database operations</li>
+          <li>Copilot enablement & workshops</li>
+          <li>Prompt engineering</li>
+          <li>AI workflow design</li>
         </ul>
       </div>
     </div>
@@ -627,7 +588,7 @@ const { author, social } = config;
     margin-bottom: calc(var(--grid-unit));
     font-size: 1.125rem;
     line-height: 1.6;
-    list-style-type: square;
+    list-style-type: circle;
   }
 
   .content-section ul.skills-list {
@@ -635,8 +596,8 @@ const { author, social } = config;
   }
 
   .content-section ul.skills-list li {
-    display: inline;
     width: 50%;
+    padding-right: 2rem;
     float: left;
   }
 
@@ -688,6 +649,10 @@ const { author, social } = config;
     .content-section p,
     .content-section li {
       font-size: 1rem;
+    }
+
+    .content-section ul.skills-list li {
+      width: 100%;
     }
   }
 </style>
